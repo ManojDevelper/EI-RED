@@ -1,0 +1,8 @@
+export const BACKGROUND_COLOR = '#EFF2F9';
+export const BUTTON_COLOR_BLACK = '#000000';
+export const BACKGROUND_COLOR_WHITE = '#FFFF';
+export const MENU_OPTIONS_COLOR = '#BABABA';
+export const SELECTED_MENU_OPTIONS_COLOR = '#C8434A';
+export const SELECTED_MENU_BACKGROUND_COLOR = '#FEF2F2';
+export const LINK_COLORS = '#80B4F6';
+export const ICON_COLOR_RED = '#E72D38'
