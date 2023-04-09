@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import Header from "../../components/Header";
 import Drawer from "../../components/Drawer";
+import TabsSection from "../Tabs";
+import EditMenu from "./editMemu";
 import { DisplaySectionPreview, DiaplayHeader } from "./styles";
 import { Button, Space } from 'antd';
 import logo from "../../assets/images/logo.png";
@@ -31,6 +33,8 @@ const DisplaySection = () => {
                     <EditFilled className="edit_icon" />
                 </div>
             </DiaplayHeader>
+            <TabsSection />
+            <EditMenu />
         </DisplaySectionPreview>
     )
 }

@@ -39,7 +39,7 @@ font-weight: 500;
 font-size: 15px;
 letter-spacing: 0.2px;
 color: #BABABA;
-    padding: 16px 57px 16px 19px;
+    padding: 16px 47px 16px 19px;
     border-radius: 10px;
     cursor: pointer;
 `
