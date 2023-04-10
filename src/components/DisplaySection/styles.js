@@ -62,51 +62,75 @@ export const DiaplayHeader = styled.div`
       font-size: 25px;
       cursor: pointer;
       color: ${pallete.ICON_COLOR_RED};
-      margin-top: 13px;
+      margin: 13px 0 0 10px;
     }
   }
 `;
 
-
 export const EditMenuPreview = styled.div`
-  background: white;
-  width: 100%;
   border-radius: 15px;
   padding: 15px 30px;
 `;
 
 export const EditMenuBody = styled.div`
-display: flex;
-height: 100%;
-flex-direction: column;
-justify-content: space-between;
-.menu_cards {
   display: flex;
-  gap: 20px;
+  height: 100%;
   flex-direction: column;
-  height: 500px;
-  overflow: scroll;
-  overflow-x: hidden;
-  /* width */
-::-webkit-scrollbar {
-  width: 10px;
-}
+  justify-content: space-between;
+  .addressModalHeader {
+    margin-bottom: 30px;
+      .modal_head_title_wrap {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        cursor: pointer;
+        .addButton {
+          color: ${pallete.ICON_COLOR_RED};
+        }
+      }
+      .modal_header {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        font-size: 20px;
+        font-weight: 500;
+        .drawer_memu_back {
+          cursor: pointer;
+        }
+      }
+      .modal_desc {
+        font-size: 15px;
+        font-weight: 400;
+        color: ${pallete.MENU_OPTIONS_COLOR};
+      }
+    }
+  .menu_cards {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    height: 500px;
+    overflow: scroll;
+    overflow-x: hidden;
+    /* width */
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
 
-/* Track */
-::-webkit-scrollbar-track {
-  background: transparent;
-}
+    /* Track */
+    ::-webkit-scrollbar-track {
+      background: transparent;
+    }
 
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background:  ${pallete.ICON_COLOR_RED};
-}
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+      background: ${pallete.ICON_COLOR_RED};
+    }
 
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: #555;
-}
-}
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+      background: #555;
+    }
+  }
   .save_btn {
     width: 100%;
     height: 50px;
@@ -117,7 +141,7 @@ justify-content: space-between;
     border: none;
     outline: none;
   }
-`
+`;
 
 export const TabCardsPreview = styled.div`
   border: 1px solid ${pallete.MENU_OPTIONS_COLOR};
@@ -141,12 +165,12 @@ export const TabCardsPreview = styled.div`
     .card_icons {
       display: flex;
       gap: 8px;
-    .edit_icon {
-      font-size: 18px;
-      cursor: pointer;
-      color: ${pallete.ICON_COLOR_RED};
-      margin-top: 13px;
-    }
+      .edit_icon {
+        font-size: 18px;
+        cursor: pointer;
+        color: ${pallete.ICON_COLOR_RED};
+        margin-top: 13px;
+      }
     }
   }
 
@@ -185,7 +209,7 @@ export const TabCardsPreview = styled.div`
 
   .card_footer {
     display: flex;
-        align-items: center;
+    align-items: center;
     gap: 10px;
     margin-top: 10px;
     .phone_icon {
@@ -201,9 +225,9 @@ export const TabCardsPreview = styled.div`
 
   .card_body_single {
     font-size: 15px;
-        font-weight: 400;
-        margin-top: 40px;
-        color: ${pallete.BUTTON_COLOR_BLACK};
+    font-weight: 400;
+    margin-top: 40px;
+    color: ${pallete.BUTTON_COLOR_BLACK};
   }
 
   .card_body_icons {
@@ -216,97 +240,145 @@ export const TabCardsPreview = styled.div`
       gap: 5px;
       flex-direction: column;
       font-size: 10px;
-    align-items: center;
-    font-weight: 600;
-        color: ${pallete.BUTTON_COLOR_BLACK};
+      align-items: center;
+      font-weight: 600;
+      color: ${pallete.BUTTON_COLOR_BLACK};
       .icon {
-      width: 30px;
+        width: 30px;
       }
     }
   }
 `;
 
 export const EditCardData = styled.div`
-display: flex;
-height: 100%;
-flex-direction: column;
-justify-content: space-between;
-.editcard_sec_list {
-  border: 1px solid ${pallete.MENU_OPTIONS_COLOR};
-  overflow: scroll;
-  max-height: 80px;
-  border-radius: 8px;
-  ::-webkit-scrollbar {
-  width: 5px;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background:  ${pallete.ICON_COLOR_RED};
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: #555;
-}
-}
-.edit_card_data_main {
-.edit_main_sec {
   display: flex;
-  margin-top: 20px;
+  height: 100%;
   flex-direction: column;
-  .input_label {
-    font-size: 12px;
-    font-weight: 600;
-    color: ${pallete.BUTTON_COLOR_BLACK};
+  justify-content: space-between;
+  .addressModalHeader {
+    margin-bottom: 30px;
+      .modal_head_title_wrap {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        cursor: pointer;
+        .addButton {
+          color: ${pallete.ICON_COLOR_RED};
+        }
+      }
+      .modal_header {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        font-size: 20px;
+        font-weight: 500;
+        .drawer_memu_back {
+          cursor: pointer;
+        }
+      }
+      .modal_desc {
+        font-size: 15px;
+        font-weight: 400;
+        color: ${pallete.MENU_OPTIONS_COLOR};
+      }
+    }
+  .editcard_sec_list {
+    border: 1px solid ${pallete.MENU_OPTIONS_COLOR};
+    overflow: scroll;
+    max-height: 80px;
+    border-radius: 8px;
+    ::-webkit-scrollbar {
+      width: 5px;
+    }
+
+    /* Track */
+    ::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+      background: ${pallete.ICON_COLOR_RED};
+    }
+
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+      background: #555;
+    }
   }
-  .input {
-    margin-top: 10px;
+  .edit_card_data_main {
+    height: 480px;
+    overflow: scroll;
+    overflow-x: hidden;
+    ::-webkit-scrollbar {
+      width: 5px;
+    }
+
+    /* Track */
+    ::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+      background: ${pallete.ICON_COLOR_RED};
+    }
+
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+      background: #555;
+    }
+    .edit_main_sec {
+      display: flex;
+      margin-top: 20px;
+      flex-direction: column;
+      .input_label {
+        font-size: 12px;
+        font-weight: 600;
+        color: ${pallete.BUTTON_COLOR_BLACK};
+      }
+      .input {
+        margin-top: 10px;
+      }
+      input {
+        height: 40px;
+        border-radius: 4px;
+        border: none;
+        outline: none;
+        padding: 0 0 0 10px;
+        background: ${pallete.BACKGROUND_COLOR};
+      }
+    }
+
+    .team_name_div {
+      margin-bottom: 10px;
+    }
+
+    .add_more_btn {
+      width: 100%;
+      height: 40px;
+      border-radius: 8px;
+      border: none;
+      outline: none;
+      font-size: 12px;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      margin: 10px 0;
+      cursor: pointer;
+      color: ${pallete.SELECTED_MENU_OPTIONS_COLOR};
+      background: ${pallete.SELECTED_MENU_BACKGROUND_COLOR};
+    }
   }
-  input {
-    height: 40px;
-    border-radius: 4px;
-    border: none;
-    outline: none;
-    padding: 0 0 0 10px;
-    background: ${pallete.BACKGROUND_COLOR};
+
+  .add_more_btn_dis {
+    cursor: not-allowed !important;
+    background: ${pallete.MENU_OPTIONS_COLOR} !important;
   }
-}
 
-.team_name_div {
-  margin-bottom: 10px;
-}
-
-.add_more_btn {
-  width: 100%;
-  height: 40px;
-  border-radius: 8px;
-  border: none;
-  outline: none;
-  font-size: 12px;
-  font-weight: 600;
-  display: flex;
-  align-items:center;
-  justify-content: center;
-  gap: 10px;
-  margin: 10px 0;
-  cursor: pointer;
-  color: ${pallete.SELECTED_MENU_OPTIONS_COLOR};
-  background: ${pallete.SELECTED_MENU_BACKGROUND_COLOR};
-}
-}
-
-.add_more_btn_dis {
-  cursor:  not-allowed !important; 
-  background: ${pallete.MENU_OPTIONS_COLOR} !important; 
-}
-
-.save_btn {
+  .save_btn {
     width: 100%;
     height: 50px;
     border-radius: 8px;
@@ -317,4 +389,4 @@ justify-content: space-between;
     color: ${pallete.BACKGROUND_COLOR_WHITE};
     background: ${pallete.ICON_COLOR_RED};
   }
-`
+`;

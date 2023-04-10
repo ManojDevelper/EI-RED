@@ -14,6 +14,8 @@ import location from "../../assets/icons/location.svg";
 import links from "../../assets/icons/links.svg";
 import work from "../../assets/icons/work.svg";
 import quotes from "../../assets/icons/quotes.svg";
+import ContentPreview from "./ContentPreview";
+import { privacyPolicyMock, termsConditions } from "../../utils/mock";
 
 
 const TabsSection = () => {
@@ -41,12 +43,16 @@ const TabsSection = () => {
         {
             key: '4',
             label: `Privacy Policy`,
-            children: `Content of Tab Pane 3`,
+            children: <ContentPreview
+                title="Your Privicy Matters"
+                data={privacyPolicyMock} />,
         },
         {
             key: '5',
             label: `Terms & Conditions`,
-            children: <div>hello</div>,
+            children: <ContentPreview
+                title="Terms & Conditions"
+                data={termsConditions} />,
         },
     ];
 

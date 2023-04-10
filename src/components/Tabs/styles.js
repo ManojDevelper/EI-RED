@@ -1,14 +1,15 @@
 import styled from "styled-components";
 import * as pallete from "../../utils/varibles";
 
-
 export const TabCardsPreviewMain = styled.div`
-display: grid;
-gap: 20px;
-margin-top: 30px;
-grid-template-columns: 375px 375px 375px;
-
-`
+  display: grid;
+  gap: 20px;
+  margin-top: 30px;
+  grid-template-columns: 375px 375px 375px;
+  .ant-drawer-header {
+    display: none !important;
+  }
+`;
 export const TabsSectionPreview = styled.div`
   .tabsec_title {
     font-size: 20px;
@@ -90,7 +91,7 @@ export const TabCardsPreview = styled.div`
 
   .card_footer {
     display: flex;
-        align-items: center;
+    align-items: center;
     gap: 10px;
     .phone_icon {
       font-size: 15px;
@@ -105,9 +106,9 @@ export const TabCardsPreview = styled.div`
 
   .card_body_single {
     font-size: 15px;
-        font-weight: 400;
-        margin-top: 40px;
-        color: ${pallete.BUTTON_COLOR_BLACK};
+    font-weight: 400;
+    margin-top: 40px;
+    color: ${pallete.BUTTON_COLOR_BLACK};
   }
 
   .card_body_icons {
@@ -120,12 +121,249 @@ export const TabCardsPreview = styled.div`
       gap: 5px;
       flex-direction: column;
       font-size: 10px;
-    align-items: center;
-    font-weight: 600;
-        color: ${pallete.BUTTON_COLOR_BLACK};
+      align-items: center;
+      font-weight: 600;
       .icon {
-      width: 30px;
+        width: 30px;
+      }
+      a {
+        color: ${pallete.BUTTON_COLOR_BLACK};
+        &:hover {
+          color: ${pallete.LINK_COLORS};
+        }
       }
     }
   }
 `;
+
+export const AddressModalStyle = styled.div`
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+  .textArea {
+    width: 95%;
+    height: 106px;
+    padding: 10px;
+    border-radius: 8px;
+    background: ${pallete.BACKGROUND_COLOR};
+    border: none;
+    outline: none;
+  }
+  .modal_total_wrapper {
+    .addressModalHeader {
+      .modal_head_title_wrap {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        cursor: pointer;
+        .addButton {
+          color: ${pallete.ICON_COLOR_RED};
+        }
+      }
+      .modal_header {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        font-size: 20px;
+        font-weight: 500;
+        .drawer_memu_back {
+          cursor: pointer;
+        }
+      }
+      .modal_desc {
+        font-size: 15px;
+        font-weight: 400;
+        color: ${pallete.MENU_OPTIONS_COLOR};
+      }
+    }
+
+    .modal_body {
+      height: 450px;
+      overflow: scroll;
+      overflow-x: hidden;
+      ::-webkit-scrollbar {
+        width: 10px;
+      }
+
+      /* Track */
+      ::-webkit-scrollbar-track {
+        background: transparent;
+      }
+
+      /* Handle */
+      ::-webkit-scrollbar-thumb {
+        background: ${pallete.ICON_COLOR_RED};
+      }
+
+      /* Handle on hover */
+      ::-webkit-scrollbar-thumb:hover {
+        background: #555;
+      }
+      .modal_body_input {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+      }
+    }
+    .edit_main_sec {
+      display: flex;
+      margin-top: 20px;
+      flex-direction: column;
+      .input_label {
+        font-size: 12px;
+        font-weight: 600;
+        color: ${pallete.BUTTON_COLOR_BLACK};
+      }
+      .input {
+        margin-top: 10px;
+      }
+      input {
+        height: 40px;
+        border-radius: 4px;
+        border: none;
+        outline: none;
+        padding: 0 0 0 10px;
+        background: ${pallete.BACKGROUND_COLOR};
+      }
+    }
+
+    ${"" /* CSS for Edit statement modal */}
+
+    .address_cards {
+      border: 1px solid ${pallete.MENU_OPTIONS_COLOR};
+      border-radius: 8px;
+      padding: 15px;
+      margin-top: 20px;
+      .edit_statement_input {
+        width: 95%;
+        height: 40px;
+        border-radius: 4px;
+        border: none;
+        outline: none;
+        padding: 5px;
+        margin-top: 20px;
+        background: ${pallete.BACKGROUND_COLOR};
+      }
+      .card_header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .quotes_icon {
+          width: 20px;
+        }
+        .card_action_btns {
+          display: flex;
+          gap: 10px;
+          font-size: 19px;
+          cursor: pointer;
+          color: ${pallete.ICON_COLOR_RED};
+        }
+      }
+      .card_desc {
+        font-size: 15px;
+        font-weight: 500;
+        margin-top: 20px;
+        color: ${pallete.BUTTON_COLOR_BLACK};
+      }
+    }
+  }
+  .save_btn {
+    width: 100%;
+    height: 50px;
+    border-radius: 8px;
+    font-size: 15px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: ${pallete.BACKGROUND_COLOR_WHITE};
+    background: ${pallete.ICON_COLOR_RED};
+  }
+`;
+
+
+export const ContentPreviewStyle = styled.div`
+display: flex;
+gap: 40px;
+padding-bottom: 30px;
+border-bottom: 1px solid ${pallete.MENU_OPTIONS_COLOR};
+.tab_container_contant {
+  width: 75%;
+  height: 285px;
+  overflow: scroll;
+
+  .tab_title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 20px;
+      font-weight: 500;
+    color: ${pallete.BUTTON_COLOR_BLACK};
+    .edit_icon {
+      color:  ${pallete.ICON_COLOR_RED};
+      cursor: pointer;
+    }
+  }
+  ::-webkit-scrollbar {
+      width: 5px;
+    }
+
+    /* Track */
+    ::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+      background: ${pallete.ICON_COLOR_RED};
+    }
+
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+      background: #555;
+    }
+  .tab_details {
+    .tab_details_header {
+    font-size: 16px;
+    font-weight: 500;
+    color: ${pallete.BUTTON_COLOR_BLACK};
+    }
+    .tab_details_desc {
+      font-size: 15px;
+      line-height: 25px;
+    color: ${pallete.MENU_OPTIONS_COLOR};
+    }
+  }
+}
+.tab_container_wrapper {
+  .tab_container_wrapper_main {
+    border: 1px solid ${pallete.MENU_OPTIONS_COLOR};
+    padding: 10px 30px;
+  }
+  .tab_title {
+    font-size: 15px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    color: ${pallete.BUTTON_COLOR_BLACK};
+  }
+  .side_links_wrapper {
+    padding: 0;
+    .side_links {
+      margin-top: 10px;
+      cursor: pointer;
+      list-style-type: none;
+      font-size: 15px;
+      font-weight: 400;
+    color: ${pallete.BUTTON_COLOR_BLACK};
+    transition: 0.5s in-out;
+    }
+    .side_links_active {
+      font-weight: 500;
+    }
+  }
+}
+`
+
+export const EditInfoPreview = styled.div`
+
+`

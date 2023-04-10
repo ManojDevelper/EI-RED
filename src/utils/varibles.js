@@ -1,5 +1,5 @@
 export const BACKGROUND_COLOR = '#EFF2F9';
-export const BUTTON_COLOR_BLACK = '#000000';
+export const BUTTON_COLOR_BLACK = '#2F2F2F';
 export const BACKGROUND_COLOR_WHITE = '#FFFF';
 export const MENU_OPTIONS_COLOR = '#BABABA';
 export const SELECTED_MENU_OPTIONS_COLOR = '#C8434A';
