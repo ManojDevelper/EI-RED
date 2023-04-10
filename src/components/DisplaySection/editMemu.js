@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { EditMenuPreview, TabCardsPreview, EditMenuBody, EditCardData } from "./styles";
 import { Drawer } from 'antd';
 import {
@@ -17,10 +17,8 @@ import { setEditContact, setDataObject, setShowContactModal } from '../../redux/
 
 const EditMenu = () => {
 
-    const editState = useSelector((state) => state.compEditor)
-    const dispatch = useDispatch()
-
-    const getItem = JSON.parse(localStorage.getItem("contact_data"));
+    const editState = useSelector((state) => state.compEditor);
+    const dispatch = useDispatch();
 
     const [editEmail, setEditEmail] = useState([]);
     const [editPhone, setEditPhone] = useState([]);
@@ -88,13 +86,21 @@ const EditMenu = () => {
         const tempArr = [...editState.editContact];
         tempArr[editState.dataObject.id] = {
             team: editState.dataObject.team,
-            email: editEmail.filter((item) => item != ""),
-            phone: editPhone.filter((item) => item != "")
+            email: editEmail.filter((item) => item !== ""),
+            phone: editPhone.filter((item) => item !== "")
         };
         dispatch(setEditContact({
             arr: tempArr
         }));
         setEditContactShow(false);
+    }
+
+    const deleteCardFun = (index) => {
+        const tempArr = [...editState.editContact];
+        const newKK = tempArr.filter((item, ind) => ind !== index)
+        dispatch(setEditContact({
+            arr: newKK
+        }));
     }
 
 
@@ -116,21 +122,21 @@ const EditMenu = () => {
                                 return (
                                     <TabCardsPreview key={item?.team}>
                                         <div className='card_header'>
-                                            <span className='card_title'><img src={contact} className="title_icon" />{item?.team}</span>
+                                            <span className='card_title'><img src={contact} className="title_icon" alt="img" />{item?.team}</span>
                                             <div className='card_icons'>
                                                 <EditFilled className="edit_icon" onClick={() => setItemFun(item, index)} />
-                                                <DeleteOutlined className="edit_icon" />
+                                                <DeleteOutlined className="edit_icon" onClick={() => deleteCardFun(index)} />
                                             </div>
                                         </div>
                                         <div className='card_body'>
                                             <div className='mail_sec'>
                                                 <MailFilled className='mail_icon' />
-                                                <span className='mails'>{item?.email[0]} / {item?.email[1]}</span>
+                                                <span className='mails'>{item?.email.length > 1 ? item?.email[0] + " / " + item?.email[1] : item?.email[0]}</span>
                                             </div>
                                         </div>
                                         <div className='card_footer'>
                                             <PhoneFilled className='phone_icon' />
-                                            <span className='phone'>{item?.phone[0]} / {item?.phone[1]}</span>
+                                            <span className='phone'>{item?.phone.length > 1 ? item?.phone[0] + " / " + item?.phone[1] : item?.phone[0]}</span>
                                         </div>
                                     </TabCardsPreview>
                                 )
@@ -157,7 +163,7 @@ const EditMenu = () => {
                                     <span className='input_label'>Email Id</span>
                                     {editEmail?.map((item, index) => {
                                         return (
-                                            <input value={item} type="text" placeholder="eg.services@gmail.com" className='input' onChange={(e) => emailEditFun(e.target.value, index)} />
+                                            <input value={item} type="text" placeholder="eg.services@gmail.com" className='input' onChange={(e) => emailEditFun(e.target.value, index)} key={index} />
                                         )
                                     })}
                                 </div>
@@ -169,7 +175,7 @@ const EditMenu = () => {
                                     <span className='input_label'>Contact Number</span>
                                     {editPhone?.map((item, index) => {
                                         return (
-                                            <input value={item} type="text" placeholder="eg. 9494978553" className='input' onChange={(e) => phoneEditFun(e.target.value, index)} />
+                                            <input value={item} type="text" placeholder="eg. 9494978553" className='input' onChange={(e) => phoneEditFun(e.target.value, index)} key={index} />
                                         )
                                     })}
                                 </div>

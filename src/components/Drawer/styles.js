@@ -1,24 +1,25 @@
 import styled from "styled-components";
 import * as pallete from "../../utils/varibles";
+import { convertPixlPopup } from "../../utils/functions";
 
 export const DrawerSection = styled.div`
 width: fit-content;
-padding: 20px 10px;
+padding: ${convertPixlPopup(20)} ${convertPixlPopup(10)};
 display: flex;
 flex-direction: column;
 background: ${pallete.BACKGROUND_COLOR_WHITE};
-border-radius: 15px;
+border-radius: ${convertPixlPopup(15)};
 .drawer_logo {
-width: 140px;
-margin-left: 20px;
+width: ${convertPixlPopup(140)};
+margin-left: ${convertPixlPopup(20)};
 }
 `;
 
 export const DrawerMenu = styled.div`
 display: flex;
 flex-direction: column;
-margin-top: 30px;
-gap: 10px;
+margin-top: ${convertPixlPopup(30)};
+gap: ${convertPixlPopup(10)};
 .active_btn {
     background: #FEF2F2;
     color: #C8434A;
@@ -29,18 +30,18 @@ gap: 10px;
 export const DrawerButton = styled.div`
 display: flex;
 align-items: center;
-gap: 10px;
+gap: ${convertPixlPopup(10)};
 .btn_logo {
-    width: 20px;
+    width: ${convertPixlPopup(20)};
     transition: 0.5s ease-in-out;
 }
 font-style: normal;
 font-weight: 500;
-font-size: 15px;
-letter-spacing: 0.2px;
+font-size: ${convertPixlPopup(15)};
+letter-spacing: ${convertPixlPopup(0.2)};
 color: #BABABA;
-    padding: 16px 47px 16px 19px;
-    border-radius: 10px;
+    padding: ${convertPixlPopup(16)} ${convertPixlPopup(47)} ${convertPixlPopup(16)} ${convertPixlPopup(19)};
+    border-radius: ${convertPixlPopup(10)};
     cursor: pointer;
 `
 
@@ -48,35 +49,35 @@ export const NoteSection = styled.div`
 display: flex;
 flex-direction: column;
 align-items: center;
-width: 200px;
-border: 3px solid #C4C4C4;
-border-radius: 10px;
-padding: 10px;
-margin-top: 50px;
+width: ${convertPixlPopup(200)};
+border: ${convertPixlPopup(3)} solid #C4C4C4;
+border-radius: ${convertPixlPopup(10)};
+padding: ${convertPixlPopup(10)};
+margin-top: ${convertPixlPopup(50)};
 .note_icon {
-    width: 40px;
+    width: ${convertPixlPopup(40)};
 }
 .help {
-    font-size: 15px;
+    font-size: ${convertPixlPopup(15)};
     color: #BABABA;
     font-weight: 500;
-    margin-top: 20px;
+    margin-top: ${convertPixlPopup(20)};
 }
 .notes_description {
-    font-size: 15px;
+    font-size: ${convertPixlPopup(15)};
     color: #000000;
     text-align: center;
-    margin: 5px;
+    margin: ${convertPixlPopup(5)};
     font-weight: 500;
 }
 .get_help_button {
 background: #000000;
-border-radius: 8px;
+border-radius: ${convertPixlPopup(8)};
 color: #FFFFFF;
-padding: 10px 40px;
+padding: ${convertPixlPopup(10)} ${convertPixlPopup(40)};
 border: none;
 outline: none;
 cursor: pointer;
-margin-top: 10px;
+margin-top: ${convertPixlPopup(10)};
 }
 `

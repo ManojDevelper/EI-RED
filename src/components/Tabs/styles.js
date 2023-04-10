@@ -1,26 +1,29 @@
 import styled from "styled-components";
 import * as pallete from "../../utils/varibles";
+import { convertPixlPopup } from "../../utils/functions";
 
 export const TabCardsPreviewMain = styled.div`
   display: grid;
-  gap: 20px;
-  margin-top: 30px;
-  grid-template-columns: 375px 375px 375px;
+  gap: ${convertPixlPopup(20)};
+  margin-top: ${convertPixlPopup(30)};
+  grid-template-columns: ${convertPixlPopup(360)} ${convertPixlPopup(360)} ${convertPixlPopup(
+  360
+)};
   .ant-drawer-header {
     display: none !important;
   }
 `;
 export const TabsSectionPreview = styled.div`
   .tabsec_title {
-    font-size: 20px;
+    font-size: ${convertPixlPopup(20)};
     font-weight: 500;
     color: ${pallete.BUTTON_COLOR_BLACK};
   }
   .ant-tabs-nav-list {
-    gap: 50px !important;
+    gap: ${convertPixlPopup(50)} !important;
   }
   .ant-tabs-tab-btn {
-    font-size: 18px !important;
+    font-size: ${convertPixlPopup(18)} !important;
     font-weight: 400 !important;
     color: ${pallete.BUTTON_COLOR_BLACK} !important;
   }
@@ -30,9 +33,9 @@ export const TabsSectionPreview = styled.div`
 `;
 
 export const TabCardsPreview = styled.div`
-  border: 1px solid ${pallete.MENU_OPTIONS_COLOR};
-  border-radius: 8px;
-  padding: 8px 25px;
+  border: ${convertPixlPopup(1)} solid ${pallete.MENU_OPTIONS_COLOR};
+  border-radius: ${convertPixlPopup(8)};
+  padding: ${convertPixlPopup(8)} ${convertPixlPopup(25)};
   .card_header {
     display: flex;
     align-items: center;
@@ -40,37 +43,37 @@ export const TabCardsPreview = styled.div`
     .card_title {
       display: flex;
       align-items: center;
-      font-size: 18px;
+      font-size: ${convertPixlPopup(18)};
       font-weight: 600;
-      gap: 8px;
+      gap: ${convertPixlPopup(8)};
       color: ${pallete.BUTTON_COLOR_BLACK};
       .title_icon {
-        width: 25px;
-        margin-right: 5px;
+        width: ${convertPixlPopup(25)};
+        margin-right: ${convertPixlPopup(5)};
       }
     }
     .edit_icon {
-      font-size: 18px;
+      font-size: ${convertPixlPopup(18)};
       cursor: pointer;
       color: ${pallete.ICON_COLOR_RED};
-      margin-top: 13px;
+      margin-top: ${convertPixlPopup(13)};
     }
   }
 
   .card_body {
     display: flex;
-    margin-top: 40px;
+    margin-top: ${convertPixlPopup(40)};
     justify-content: space-between;
     .mail_sec {
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: ${convertPixlPopup(10)};
       .mail_icon {
-        font-size: 15px;
+        font-size: ${convertPixlPopup(15)};
         color: ${pallete.MENU_OPTIONS_COLOR};
       }
       .mails {
-        font-size: 15px;
+        font-size: ${convertPixlPopup(15)};
         font-weight: 500;
         color: ${pallete.BUTTON_COLOR_BLACK};
       }
@@ -80,10 +83,10 @@ export const TabCardsPreview = styled.div`
       display: flex;
       align-items: center;
       justify-content: center;
-      width: 40px;
-      height: 40px;
-      border-radius: 50px;
-      font-size: 12px;
+      width: ${convertPixlPopup(40)};
+      height: ${convertPixlPopup(40)};
+      border-radius: ${convertPixlPopup(50)};
+      font-size: ${convertPixlPopup(12)};
       font-weight: 600;
       color: ${pallete.SELECTED_MENU_OPTIONS_COLOR};
       background: ${pallete.SELECTED_MENU_BACKGROUND_COLOR};
@@ -93,39 +96,39 @@ export const TabCardsPreview = styled.div`
   .card_footer {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: ${convertPixlPopup(10)};
     .phone_icon {
-      font-size: 15px;
+      font-size: ${convertPixlPopup(15)};
       color: ${pallete.MENU_OPTIONS_COLOR};
     }
     .phone {
-      font-size: 15px;
+      font-size: ${convertPixlPopup(15)};
       font-weight: 500;
       color: ${pallete.BUTTON_COLOR_BLACK};
     }
   }
 
   .card_body_single {
-    font-size: 15px;
+    font-size: ${convertPixlPopup(15)};
     font-weight: 400;
-    margin-top: 40px;
+    margin-top: ${convertPixlPopup(40)};
     color: ${pallete.BUTTON_COLOR_BLACK};
   }
 
   .card_body_icons {
     display: flex;
-    gap: 30px;
+    gap: ${convertPixlPopup(30)};
     width: fit-content;
-    margin: 40px auto 0 auto;
+    margin: ${convertPixlPopup(40)} auto 0 auto;
     .icon_cont {
       display: flex;
-      gap: 5px;
+      gap: ${convertPixlPopup(5)};
       flex-direction: column;
-      font-size: 10px;
+      font-size: ${convertPixlPopup(10)};
       align-items: center;
       font-weight: 600;
       .icon {
-        width: 30px;
+        width: ${convertPixlPopup(30)};
       }
       a {
         color: ${pallete.BUTTON_COLOR_BLACK};
@@ -144,9 +147,9 @@ export const AddressModalStyle = styled.div`
   justify-content: space-between;
   .textArea {
     width: 95%;
-    height: 106px;
-    padding: 10px;
-    border-radius: 8px;
+    height: ${convertPixlPopup(106)};
+    padding: ${convertPixlPopup(10)};
+    border-radius:${convertPixlPopup(8)};
     background: ${pallete.BACKGROUND_COLOR};
     border: none;
     outline: none;
@@ -164,23 +167,23 @@ export const AddressModalStyle = styled.div`
       }
       .modal_header {
         display: flex;
-        gap: 10px;
+        gap: ${convertPixlPopup(10)};
         align-items: center;
-        font-size: 20px;
+        font-size: ${convertPixlPopup(20)};
         font-weight: 500;
         .drawer_memu_back {
           cursor: pointer;
         }
       }
       .modal_desc {
-        font-size: 15px;
+        font-size: ${convertPixlPopup(15)};
         font-weight: 400;
         color: ${pallete.MENU_OPTIONS_COLOR};
       }
     }
 
     .modal_body {
-      height: 450px;
+      height: ${convertPixlPopup(450)};
       overflow: scroll;
       overflow-x: hidden;
       ::-webkit-scrollbar {
@@ -282,30 +285,29 @@ export const AddressModalStyle = styled.div`
   }
 `;
 
-
 export const ContentPreviewStyle = styled.div`
-display: flex;
-gap: 40px;
-padding-bottom: 30px;
-border-bottom: 1px solid ${pallete.MENU_OPTIONS_COLOR};
-.tab_container_contant {
-  width: 75%;
-  height: 285px;
-  overflow: scroll;
+  display: flex;
+  gap: 40px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid ${pallete.MENU_OPTIONS_COLOR};
+  .tab_container_contant {
+    width: 75%;
+    height: 285px;
+    overflow: scroll;
 
-  .tab_title {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-size: 20px;
+    .tab_title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 20px;
       font-weight: 500;
-    color: ${pallete.BUTTON_COLOR_BLACK};
-    .edit_icon {
-      color:  ${pallete.ICON_COLOR_RED};
-      cursor: pointer;
+      color: ${pallete.BUTTON_COLOR_BLACK};
+      .edit_icon {
+        color: ${pallete.ICON_COLOR_RED};
+        cursor: pointer;
+      }
     }
-  }
-  ::-webkit-scrollbar {
+    ::-webkit-scrollbar {
       width: 5px;
     }
 
@@ -323,76 +325,76 @@ border-bottom: 1px solid ${pallete.MENU_OPTIONS_COLOR};
     ::-webkit-scrollbar-thumb:hover {
       background: #555;
     }
-  .tab_details {
-    .tab_details_header {
-    font-size: 16px;
-    font-weight: 500;
-    color: ${pallete.BUTTON_COLOR_BLACK};
+    .tab_details {
+      .tab_details_header {
+        font-size: 16px;
+        font-weight: 500;
+        color: ${pallete.BUTTON_COLOR_BLACK};
+      }
+      .tab_details_desc {
+        font-size: 15px;
+        line-height: 25px;
+        color: ${pallete.MENU_OPTIONS_COLOR};
+      }
     }
-    .tab_details_desc {
+  }
+  .tab_container_wrapper {
+    .tab_container_wrapper_main {
+      border: 1px solid ${pallete.MENU_OPTIONS_COLOR};
+      padding: 10px 30px;
+    }
+    .tab_title {
       font-size: 15px;
-      line-height: 25px;
-    color: ${pallete.MENU_OPTIONS_COLOR};
-    }
-  }
-}
-.tab_container_wrapper {
-  .tab_container_wrapper_main {
-    border: 1px solid ${pallete.MENU_OPTIONS_COLOR};
-    padding: 10px 30px;
-  }
-  .tab_title {
-    font-size: 15px;
-    font-weight: 500;
-    margin-bottom: 20px;
-    color: ${pallete.BUTTON_COLOR_BLACK};
-  }
-  .side_links_wrapper {
-    padding: 0;
-    .side_links {
-      margin-top: 10px;
-      cursor: pointer;
-      list-style-type: none;
-      font-size: 15px;
-      font-weight: 400;
-    color: ${pallete.BUTTON_COLOR_BLACK};
-    transition: 0.5s in-out;
-    }
-    .side_links_active {
       font-weight: 500;
+      margin-bottom: 20px;
+      color: ${pallete.BUTTON_COLOR_BLACK};
+    }
+    .side_links_wrapper {
+      padding: 0;
+      .side_links {
+        margin-top: 10px;
+        cursor: pointer;
+        list-style-type: none;
+        font-size: 15px;
+        font-weight: 400;
+        color: ${pallete.BUTTON_COLOR_BLACK};
+        transition: 0.5s in-out;
+      }
+      .side_links_active {
+        font-weight: 500;
+      }
     }
   }
-}
-`
+`;
 
 export const EditInfoPreview = styled.div`
-.info_preview_main {
-  .edit_preview {
-  display: flex;
-  margin-top: 20px;
-  flex-direction: column;
-  .edit_preview_title {
-      border-radius: 4px;
-      padding: 10px;
-      font-size: 15px;
-      font-weight: bold;
-      border: none;
-      outline-color: ${pallete.ICON_COLOR_RED};
-      background: ${pallete.BACKGROUND_COLOR};
+  .info_preview_main {
+    .edit_preview {
+      display: flex;
+      margin-top: 20px;
+      flex-direction: column;
+      .edit_preview_title {
+        border-radius: 4px;
+        padding: 10px;
+        font-size: 15px;
+        font-weight: bold;
+        border: none;
+        outline-color: ${pallete.ICON_COLOR_RED};
+        background: ${pallete.BACKGROUND_COLOR};
+      }
+      .edit_preview_desc {
+        margin-top: 10px;
+        border-radius: 4px;
+        height: 200px;
+        padding: 10px;
+        line-height: 20px;
+        border: none;
+        background: ${pallete.BACKGROUND_COLOR};
+        outline-color: ${pallete.ICON_COLOR_RED};
+      }
+    }
   }
-  .edit_preview_desc {
-    margin-top: 10px;
-      border-radius: 4px;
-      height: 200px;
-      padding: 10px;
-      line-height: 20px;
-      border: none;
-      background: ${pallete.BACKGROUND_COLOR};
-      outline-color: ${pallete.ICON_COLOR_RED};
-  }
-  }
-}
-.add_text_block {
+  .add_text_block {
     width: 100%;
     height: 45px;
     border-radius: 8px;
@@ -408,4 +410,4 @@ export const EditInfoPreview = styled.div`
       margin-right: 10px;
     }
   }
-`
+`;

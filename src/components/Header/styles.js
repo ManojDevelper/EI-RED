@@ -1,37 +1,38 @@
 import styled from "styled-components";
 import * as pallete from "../../utils/varibles";
+import { convertPixlPopup } from "../../utils/functions";
 
 export const HeaderSection = styled.div`
   display: flex;
   align-items: center;
-  padding: 10px 35px;
+  padding: ${convertPixlPopup(10)} ${convertPixlPopup(35)};
   background: ${pallete.BACKGROUND_COLOR_WHITE};
   justify-content: space-between;
   .headerSection {
     display: flex;
     align-items: center;
     .logo {
-      width: 50px;
-      height: 50px;
+      width: ${convertPixlPopup(50)};
+      height: ${convertPixlPopup(50)};
     }
     .header_search {
       display: flex;
       align-items: center;
       background: ${pallete.BACKGROUND_COLOR};
-      border-radius: 8px;
-      width: 411px;
-      height: 40px;
-      padding: 0 10px;
+      border-radius: ${convertPixlPopup(8)};
+      width: ${convertPixlPopup(411)};
+      height: ${convertPixlPopup(40)};
+      padding: 0 ${convertPixlPopup(10)};
       margin-left: 150px;
       .SearchOutlined {
-        font-size: 20px;
+        font-size: ${convertPixlPopup(20)};
         color: #c4c4c4;
       }
       .search_input {
         border: none;
         outline: none;
         background: transparent;
-        margin-left: 10px;
+        margin-left: ${convertPixlPopup(10)};
       }
     }
   }
@@ -42,20 +43,20 @@ export const HeaderSection = styled.div`
     .check_out {
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: ${convertPixlPopup(10)};
       color: ${pallete.BACKGROUND_COLOR_WHITE};
-      padding: 10px 30px;
-      height: 40px;
-      font-size: 15px;
+      padding: ${convertPixlPopup(10)} ${convertPixlPopup(30)};
+      height: ${convertPixlPopup(40)};
+      font-size: ${convertPixlPopup(15)};
       font-weight: 600;
       background: ${pallete.BUTTON_COLOR_BLACK};
-      border-radius: 8px;
+      border-radius: ${convertPixlPopup(8)};
       border: none;
       outline: none;
-      margin-right: 80px;
+      margin-right: ${convertPixlPopup(80)};
       cursor: pointer;
       .cart {
-        font-size: 20px;
+        font-size: ${convertPixlPopup(20)};
       }
     }
 
@@ -63,17 +64,17 @@ export const HeaderSection = styled.div`
       display: flex;
       align-items: center;
       .user_image {
-        width: 50px;
-        height: 50px;
+        width: ${convertPixlPopup(50)};
+        height: ${convertPixlPopup(50)};
         border-radius: 50%;
-        border: 3px solid gray;
+        border: ${convertPixlPopup(3)} solid gray;
       }
       .user_name {
         font-weight: 600;
-        font-size: 15px;
+        font-size: ${convertPixlPopup(15)};
         line-height: auto;
         color: #000000;
-        margin: 0 10px;
+        margin: 0 ${convertPixlPopup(10)};
       }
       .dropdown_icon {
         cursor: pointer;

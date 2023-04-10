@@ -1,6 +1,4 @@
 import React, { useState } from 'react';
-import Header from "../../components/Header";
-import Drawer from "../../components/Drawer";
 import TabsSection from "../Tabs";
 import EditMenu from "./editMemu";
 import { DisplaySectionPreview, DiaplayHeader } from "./styles";
@@ -8,7 +6,6 @@ import { Modal } from 'antd';
 import logo from "../../assets/images/logo.png";
 import verify from "../../assets/icons/verify.svg";
 import verify_disable from "../../assets/icons/verify_disable.svg";
-import digital_round from "../../assets/images/digital_round.svg";
 import { EditFilled } from '@ant-design/icons';
 import { AddressModalStyle } from '../Tabs/styles';
 
@@ -34,7 +31,7 @@ const DisplaySection = () => {
                         <br />
                         <span className='comp_desc'>Digital Inks</span>
                     </div>
-                    <p className='verify_btn' onClick={() => setCompVerify(true)}><img src={compVerify ? verify : verify_disable} className='verify_icon' /> {!compVerify ? "Verify Company" : "Verified"}</p>
+                    <p className='verify_btn' onClick={() => setCompVerify(true)}><img src={compVerify ? verify : verify_disable} className='verify_icon' alt="img" /> {!compVerify ? "Verify Company" : "Verified"}</p>
                 </div>
                 <div className='compo_edit_wrapper'>
                     <p className='comp_description'>{description}</p>

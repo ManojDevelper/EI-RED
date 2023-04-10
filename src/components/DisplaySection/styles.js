@@ -1,37 +1,38 @@
 import styled from "styled-components";
 import * as pallete from "../../utils/varibles";
+import { convertPixlPopup } from "../../utils/functions";
 
 export const DisplaySectionPreview = styled.div`
   background: white;
   width: 100%;
-  border-radius: 15px;
-  padding: 15px 30px;
+  border-radius: ${convertPixlPopup(15)};
+  padding: ${convertPixlPopup(15)} ${convertPixlPopup(30)};
 `;
 
 export const DiaplayHeader = styled.div`
   .tab_title {
-    font-size: 30px;
+    font-size: ${convertPixlPopup(30)};
     font-weight: 600;
     color: ${pallete.BUTTON_COLOR_BLACK};
   }
   .logo_sec {
     display: flex;
     .logo {
-      width: 50px;
-      height: 50px;
-      border: 1px solid ${pallete.MENU_OPTIONS_COLOR};
-      border-radius: 50px;
-      padding: 5px;
+      width: ${convertPixlPopup(50)};
+      height: ${convertPixlPopup(50)};
+      border: ${convertPixlPopup(1)} solid ${pallete.MENU_OPTIONS_COLOR};
+      border-radius: ${convertPixlPopup(50)};
+      padding: ${convertPixlPopup(5)};
     }
     .comp_details_wrap {
-      margin-left: 20px;
+      margin-left: ${convertPixlPopup(20)};
       .comp_title {
-        font-size: 20px;
+        font-size: ${convertPixlPopup(20)};
         font-weight: 600;
         color: ${pallete.BUTTON_COLOR_BLACK};
       }
       .compo_desc {
-        font-size: 18px;
+        font-size: ${convertPixlPopup(18)};
         color: ${pallete.MENU_OPTIONS_COLOR};
       }
     }
@@ -39,37 +40,37 @@ export const DiaplayHeader = styled.div`
     .verify_btn {
       display: flex;
       align-items: center;
-      gap: 10px;
-      margin-left: 40px;
+      gap: ${convertPixlPopup(10)};
+      margin-left: ${convertPixlPopup(40)};
       cursor: pointer;
       font-weight: 500;
       color: ${pallete.LINK_COLORS};
       text-decoration: underline;
       .verify_icon {
-        width: 30px;
+        width: ${convertPixlPopup(30)};
       }
     }
   }
 
   .compo_edit_wrapper {
     display: flex;
-    max-width: 900px;
+    max-width: ${convertPixlPopup(900)};
     .comp_description {
       color: ${pallete.MENU_OPTIONS_COLOR};
-      font-size: 16px;
+      font-size: ${convertPixlPopup(16)};
     }
     .edit_icon {
-      font-size: 25px;
+      font-size: ${convertPixlPopup(25)};
       cursor: pointer;
       color: ${pallete.ICON_COLOR_RED};
-      margin: 13px 0 0 10px;
+      margin: ${convertPixlPopup(13)} 0 0 ${convertPixlPopup(10)};
     }
   }
 `;
 
 export const EditMenuPreview = styled.div`
-  border-radius: 15px;
-  padding: 15px 30px;
+  border-radius: ${convertPixlPopup(15)};
+  padding: ${convertPixlPopup(15)} ${convertPixlPopup(30)};
 `;
 
 export const EditMenuBody = styled.div`
@@ -78,7 +79,7 @@ export const EditMenuBody = styled.div`
   flex-direction: column;
   justify-content: space-between;
   .addressModalHeader {
-    margin-bottom: 30px;
+    margin-bottom: ${convertPixlPopup(30)};
     .modal_head_title_wrap {
       display: flex;
       align-items: center;
@@ -90,30 +91,30 @@ export const EditMenuBody = styled.div`
     }
     .modal_header {
       display: flex;
-      gap: 10px;
+      gap: ${convertPixlPopup(10)};
       align-items: center;
-      font-size: 20px;
+      font-size: ${convertPixlPopup(20)};
       font-weight: 500;
       .drawer_memu_back {
         cursor: pointer;
       }
     }
     .modal_desc {
-      font-size: 15px;
+      font-size: ${convertPixlPopup(15)};
       font-weight: 400;
       color: ${pallete.MENU_OPTIONS_COLOR};
     }
   }
   .menu_cards {
     display: flex;
-    gap: 20px;
+    gap: ${convertPixlPopup(20)};
     flex-direction: column;
-    height: 500px;
+    height: ${convertPixlPopup(500)};
     overflow: scroll;
     overflow-x: hidden;
     /* width */
     ::-webkit-scrollbar {
-      width: 10px;
+      width: ${convertPixlPopup(10)};
     }
 
     /* Track */
@@ -133,9 +134,9 @@ export const EditMenuBody = styled.div`
   }
   .save_btn {
     width: 100%;
-    height: 50px;
-    border-radius: 8px;
-    font-size: 15px;
+    height: ${convertPixlPopup(50)};
+    border-radius: ${convertPixlPopup(8)};
+    font-size: ${convertPixlPopup(15)};
     color: ${pallete.BACKGROUND_COLOR_WHITE};
     background: ${pallete.ICON_COLOR_RED};
     border: none;
@@ -144,9 +145,9 @@ export const EditMenuBody = styled.div`
 `;
 
 export const TabCardsPreview = styled.div`
-  border: 1px solid ${pallete.MENU_OPTIONS_COLOR};
-  border-radius: 8px;
-  padding: 8px 25px;
+  border:${convertPixlPopup(1)} solid ${pallete.MENU_OPTIONS_COLOR};
+  border-radius:${convertPixlPopup(8)};
+  padding:${convertPixlPopup(8)} ${convertPixlPopup(25)};
   .card_header {
     display: flex;
     align-items: center;
@@ -154,40 +155,40 @@ export const TabCardsPreview = styled.div`
     .card_title {
       display: flex;
       align-items: center;
-      font-size: 15px;
+      font-size: ${convertPixlPopup(15)};
       font-weight: 500;
-      gap: 8px;
+      gap:${convertPixlPopup(8)};
       color: ${pallete.BUTTON_COLOR_BLACK};
       .title_icon {
-        width: 20px;
+        width: ${convertPixlPopup(20)};
       }
     }
     .card_icons {
       display: flex;
-      gap: 8px;
+      gap:${convertPixlPopup(8)};
       .edit_icon {
-        font-size: 18px;
+        font-size: ${convertPixlPopup(18)};
         cursor: pointer;
         color: ${pallete.ICON_COLOR_RED};
-        margin-top: 13px;
+        margin-top: ${convertPixlPopup(13)};
       }
     }
   }
 
   .card_body {
     display: flex;
-    margin-top: 20px;
+    margin-top: ${convertPixlPopup(20)};
     justify-content: space-between;
     .mail_sec {
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: ${convertPixlPopup(10)};
       .mail_icon {
-        font-size: 15px;
+        font-size: ${convertPixlPopup(15)};
         color: ${pallete.MENU_OPTIONS_COLOR};
       }
       .mails {
-        font-size: 15px;
+        font-size: ${convertPixlPopup(15)};
         font-weight: 400;
         color: ${pallete.BUTTON_COLOR_BLACK};
       }
@@ -197,10 +198,10 @@ export const TabCardsPreview = styled.div`
       display: flex;
       align-items: center;
       justify-content: center;
-      width: 40px;
-      height: 40px;
-      border-radius: 50px;
-      font-size: 12px;
+      width: ${convertPixlPopup(40)};
+      height: ${convertPixlPopup(40)};
+      border-radius: ${convertPixlPopup(50)};
+      font-size: ${convertPixlPopup(12)};
       font-weight: 600;
       color: ${pallete.SELECTED_MENU_OPTIONS_COLOR};
       background: ${pallete.SELECTED_MENU_BACKGROUND_COLOR};
@@ -210,41 +211,41 @@ export const TabCardsPreview = styled.div`
   .card_footer {
     display: flex;
     align-items: center;
-    gap: 10px;
-    margin-top: 10px;
+    gap: ${convertPixlPopup(10)};
+    margin-top: ${convertPixlPopup(10)};
     .phone_icon {
-      font-size: 15px;
+      font-size: ${convertPixlPopup(15)};
       color: ${pallete.MENU_OPTIONS_COLOR};
     }
     .phone {
-      font-size: 15px;
+      font-size: ${convertPixlPopup(15)};
       font-weight: 400;
       color: ${pallete.BUTTON_COLOR_BLACK};
     }
   }
 
   .card_body_single {
-    font-size: 15px;
+    font-size: ${convertPixlPopup(15)};
     font-weight: 400;
-    margin-top: 40px;
+    margin-top: ${convertPixlPopup(40)};
     color: ${pallete.BUTTON_COLOR_BLACK};
   }
 
   .card_body_icons {
     display: flex;
-    gap: 30px;
+    gap: ${convertPixlPopup(30)};
     width: fit-content;
-    margin: 40px auto 0 auto;
+    margin: ${convertPixlPopup(40)} auto 0 auto;
     .icon_cont {
       display: flex;
-      gap: 5px;
+      gap:${convertPixlPopup(5)};
       flex-direction: column;
-      font-size: 10px;
+      font-size: ${convertPixlPopup(10)};
       align-items: center;
       font-weight: 600;
       color: ${pallete.BUTTON_COLOR_BLACK};
       .icon {
-        width: 30px;
+        width: ${convertPixlPopup(30)};
       }
     }
   }
@@ -256,7 +257,7 @@ export const EditCardData = styled.div`
   flex-direction: column;
   justify-content: space-between;
   .addressModalHeader {
-    margin-bottom: 30px;
+    margin-bottom: ${convertPixlPopup(30)};
     .modal_head_title_wrap {
       display: flex;
       align-items: center;
@@ -268,27 +269,27 @@ export const EditCardData = styled.div`
     }
     .modal_header {
       display: flex;
-      gap: 10px;
+      gap: ${convertPixlPopup(10)};
       align-items: center;
-      font-size: 20px;
+      font-size: ${convertPixlPopup(20)};
       font-weight: 500;
       .drawer_memu_back {
         cursor: pointer;
       }
     }
     .modal_desc {
-      font-size: 15px;
+      font-size: ${convertPixlPopup(15)};
       font-weight: 400;
       color: ${pallete.MENU_OPTIONS_COLOR};
     }
   }
   .editcard_sec_list {
-    border: 1px solid ${pallete.MENU_OPTIONS_COLOR};
+    border:${convertPixlPopup(1)} solid ${pallete.MENU_OPTIONS_COLOR};
     overflow: scroll;
-    max-height: 80px;
-    border-radius: 8px;
+    max-height: ${convertPixlPopup(80)};
+    border-radius:${convertPixlPopup(8)};
     ::-webkit-scrollbar {
-      width: 5px;
+      width:${convertPixlPopup(5)};
     }
 
     /* Track */
@@ -307,11 +308,11 @@ export const EditCardData = styled.div`
     }
   }
   .edit_card_data_main {
-    height: 480px;
+    height: ${convertPixlPopup(480)};
     overflow: scroll;
     overflow-x: hidden;
     ::-webkit-scrollbar {
-      width: 5px;
+      width:${convertPixlPopup(5)};
     }
 
     /* Track */
@@ -330,43 +331,43 @@ export const EditCardData = styled.div`
     }
     .edit_main_sec {
       display: flex;
-      margin-top: 20px;
+      margin-top: ${convertPixlPopup(20)};
       flex-direction: column;
       .input_label {
-        font-size: 12px;
+        font-size: ${convertPixlPopup(12)};
         font-weight: 600;
         color: ${pallete.BUTTON_COLOR_BLACK};
       }
       .input {
-        margin-top: 10px;
+        margin-top: ${convertPixlPopup(10)};
       }
       input {
-        height: 40px;
-        border-radius: 4px;
+        height: ${convertPixlPopup(40)};
+        border-radius:${convertPixlPopup(4)};
         border: none;
         outline: none;
-        padding: 0 0 0 10px;
+        padding: 0 0 0 ${convertPixlPopup(10)};
         background: ${pallete.BACKGROUND_COLOR};
       }
     }
 
     .team_name_div {
-      margin-bottom: 10px;
+      margin-bottom: ${convertPixlPopup(10)};
     }
 
     .add_more_btn {
       width: 100%;
-      height: 40px;
-      border-radius: 8px;
+      height: ${convertPixlPopup(40)};
+      border-radius:${convertPixlPopup(8)};
       border: none;
       outline: none;
-      font-size: 12px;
+      font-size: ${convertPixlPopup(12)};
       font-weight: 600;
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 10px;
-      margin: 10px 0;
+      gap: ${convertPixlPopup(10)};
+      margin: ${convertPixlPopup(10)} 0;
       cursor: pointer;
       color: ${pallete.SELECTED_MENU_OPTIONS_COLOR};
       background: ${pallete.SELECTED_MENU_BACKGROUND_COLOR};
@@ -380,9 +381,9 @@ export const EditCardData = styled.div`
 
   .save_btn {
     width: 100%;
-    height: 50px;
-    border-radius: 8px;
-    font-size: 15px;
+    height: ${convertPixlPopup(50)};
+    border-radius:${convertPixlPopup(8)};
+    font-size: ${convertPixlPopup(15)};
     border: none;
     outline: none;
     cursor: pointer;

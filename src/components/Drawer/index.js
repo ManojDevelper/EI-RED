@@ -14,12 +14,10 @@ import payment from "../../assets/icons/payment.png";
 import payment_hover from "../../assets/icons/payment_hover.png";
 import note_icon from "../../assets/icons/note_icon.png";
 import { DrawerSection, DrawerMenu, DrawerButton, NoteSection } from "./styles";
-import { SearchOutlined, ShoppingCartOutlined, DownOutlined } from '@ant-design/icons';
-import { Button, Space } from 'antd';
 
 
 const Drawer = () => {
-    const [tabActive, setTabActive] = useState("dashboard")
+    const [tabActive, setTabActive] = useState("about")
     const tabActiveFun = (value) => {
         setTabActive(value)
     }

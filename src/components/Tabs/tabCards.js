@@ -125,14 +125,6 @@ const TabCards = () => {
         }));
     }
 
-    const setEditStatementFun = (value, index) => {
-        const tempArr = JSON.parse(JSON.stringify(editState.statements));
-        tempArr[index]["value"] = value;
-        // dispatch(setStatements({
-        //     statements: tempArr
-        // }));
-    }
-
     const saveEditedCardFun = (value, index) => {
         const tempArr = JSON.parse(JSON.stringify(editState.statements));
         tempArr[index]["value"] = value;
@@ -171,13 +163,13 @@ const TabCards = () => {
         <TabCardsPreviewMain>
             <TabCardsPreview>
                 <div className='card_header'>
-                    <span className='card_title'><img src={contact} className="title_icon" />Contact</span>
+                    <span className='card_title'><img src={contact} className="title_icon" alt="contact" />Contact</span>
                     <EditFilled className="edit_icon" onClick={() => dispatch(setShowContactModal({ bool: true }))} />
                 </div>
                 <div className='card_body'>
                     <div className='mail_sec'>
                         <MailFilled className='mail_icon' />
-                        <span className='mails'>{editState.editContact[0]?.email[0]} / {editState.editContact[0]?.email[1]}</span>
+                        <span className='mails'>{editState.editContact[0]?.email?.length > 1 ? editState.editContact[0]?.email[0] + " / " + editState.editContact[0]?.email[1] : editState.editContact[0]?.email[0]}</span>
                     </div>
                     <div className='number_badge'>
                         +{editState.editContact?.length}
@@ -185,13 +177,13 @@ const TabCards = () => {
                 </div>
                 <div className='card_footer'>
                     <PhoneFilled className='phone_icon' />
-                    <span className='phone'>{editState.editContact[0]?.phone[0]} / {editState.editContact[0]?.phone[1]}</span>
+                    <span className='phone'>{editState.editContact[0]?.phone?.length > 1 ? editState.editContact[0]?.phone[0] + " / " + editState.editContact[0]?.phone[1] : editState.editContact[0]?.phone[0]}</span>
                 </div>
             </TabCardsPreview>
 
             <TabCardsPreview>
                 <div className='card_header'>
-                    <span className='card_title'><img src={location} className="title_icon" />Address</span>
+                    <span className='card_title'><img src={location} className="title_icon" alt="location" />Address</span>
                     <EditFilled className="edit_icon" onClick={() => setAddressFun()} />
                 </div>
                 <div className='card_body_single'>
@@ -202,7 +194,7 @@ const TabCards = () => {
 
             <TabCardsPreview>
                 <div className='card_header'>
-                    <span className='card_title'><img src={work} className="title_icon" />House of operations</span>
+                    <span className='card_title'><img src={work} className="title_icon" alt="work" />House of operations</span>
                     <EditFilled className="edit_icon" onClick={() => editHop()} />
                 </div>
                 <div className='card_body_single'>
@@ -212,24 +204,24 @@ const TabCards = () => {
 
             <TabCardsPreview>
                 <div className='card_header'>
-                    <span className='card_title'><img src={linksmain} className="title_icon" />Social Media & Links</span>
+                    <span className='card_title'><img src={linksmain} className="title_icon" alt="img" />Social Media & Links</span>
                     <EditFilled className="edit_icon" onClick={() => setLinksFun()} />
                 </div>
                 <div className='card_body_icons'>
                     <div className='icon_cont'>
-                        <img src={globe} className='icon' />
+                        <img src={globe} className='icon' alt="img" />
                         <a href={"https://" + links.website}>Website</a>
                     </div>
                     <div className='icon_cont'>
-                        <img src={instagram} className='icon' />
+                        <img src={instagram} className='icon' alt="img" />
                         <a href={"https://" + links.insta}>Instagram</a>
                     </div>
                     <div className='icon_cont'>
-                        <img src={facebook} className='icon' />
+                        <img src={facebook} className='icon' alt="img" />
                         <a href={"https://" + links.fb}>Facebook</a>
                     </div>
                     <div className='icon_cont'>
-                        <img src={twitter} className='icon' />
+                        <img src={twitter} className='icon' alt="img" />
                         <a href={"https://" + links.twit}>Twitter</a>
                     </div>
                 </div>
@@ -237,7 +229,7 @@ const TabCards = () => {
 
             <TabCardsPreview>
                 <div className='card_header'>
-                    <span className='card_title'><img src={quotes} className="title_icon" />Statement</span>
+                    <span className='card_title'><img src={quotes} className="title_icon" alt="img" />Statement</span>
                     <EditFilled className="edit_icon" onClick={() => setOpenStatementModal(true)} />
                 </div>
                 <div className='card_body'>
@@ -341,7 +333,7 @@ const TabCards = () => {
                                 return (
                                     <div className='address_cards' key={item?.value}>
                                         <div className='card_header'>
-                                            <img src={quotes} className='quotes_icon' />
+                                            <img src={quotes} className='quotes_icon' alt="img" />
                                             <div className='card_action_btns'>
                                                 <DeleteOutlined onClick={() => deleteEditCardFun(item.id)} />
                                                 {item?.edit ?

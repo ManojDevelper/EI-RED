@@ -2,7 +2,6 @@ import React from 'react';
 import logo from "../../assets/images/logo.png";
 import { HeaderSection } from "./styles";
 import { SearchOutlined, ShoppingCartOutlined, DownOutlined } from '@ant-design/icons';
-import { Button, Space } from 'antd';
 import user_icon from "../../assets/images/user_icon.png";
 
 
