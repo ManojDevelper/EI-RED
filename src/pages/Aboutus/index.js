@@ -6,14 +6,14 @@ import { BottomWrapper } from "./styles";
 
 
 const AboutUs = () => {
-    return (
-        <Fragment>
-            <Header />
-            <BottomWrapper>
-                <Drawer />
-                <DisplaySection />
-            </BottomWrapper>
-        </Fragment>
-    )
+  return (
+    <Fragment>
+      <Header />
+      <BottomWrapper>
+        <Drawer />
+        <DisplaySection />
+      </BottomWrapper>
+    </Fragment>
+  )
 }
 export default AboutUs;

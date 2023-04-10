@@ -177,15 +177,15 @@ const TabCards = () => {
                 <div className='card_body'>
                     <div className='mail_sec'>
                         <MailFilled className='mail_icon' />
-                        <span className='mails'>salesteam@br.in / salesteam2@br.in</span>
+                        <span className='mails'>{editState.editContact[0]?.email[0]} / {editState.editContact[0]?.email[1]}</span>
                     </div>
                     <div className='number_badge'>
-                        +5
+                        +{editState.editContact?.length}
                     </div>
                 </div>
                 <div className='card_footer'>
                     <PhoneFilled className='phone_icon' />
-                    <span className='phone'>+91 9494978552 / 9493815946</span>
+                    <span className='phone'>{editState.editContact[0]?.phone[0]} / {editState.editContact[0]?.phone[1]}</span>
                 </div>
             </TabCardsPreview>
 

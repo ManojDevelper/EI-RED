@@ -79,31 +79,31 @@ export const EditMenuBody = styled.div`
   justify-content: space-between;
   .addressModalHeader {
     margin-bottom: 30px;
-      .modal_head_title_wrap {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        cursor: pointer;
-        .addButton {
-          color: ${pallete.ICON_COLOR_RED};
-        }
-      }
-      .modal_header {
-        display: flex;
-        gap: 10px;
-        align-items: center;
-        font-size: 20px;
-        font-weight: 500;
-        .drawer_memu_back {
-          cursor: pointer;
-        }
-      }
-      .modal_desc {
-        font-size: 15px;
-        font-weight: 400;
-        color: ${pallete.MENU_OPTIONS_COLOR};
+    .modal_head_title_wrap {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      cursor: pointer;
+      .addButton {
+        color: ${pallete.ICON_COLOR_RED};
       }
     }
+    .modal_header {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      font-size: 20px;
+      font-weight: 500;
+      .drawer_memu_back {
+        cursor: pointer;
+      }
+    }
+    .modal_desc {
+      font-size: 15px;
+      font-weight: 400;
+      color: ${pallete.MENU_OPTIONS_COLOR};
+    }
+  }
   .menu_cards {
     display: flex;
     gap: 20px;
@@ -257,31 +257,31 @@ export const EditCardData = styled.div`
   justify-content: space-between;
   .addressModalHeader {
     margin-bottom: 30px;
-      .modal_head_title_wrap {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        cursor: pointer;
-        .addButton {
-          color: ${pallete.ICON_COLOR_RED};
-        }
-      }
-      .modal_header {
-        display: flex;
-        gap: 10px;
-        align-items: center;
-        font-size: 20px;
-        font-weight: 500;
-        .drawer_memu_back {
-          cursor: pointer;
-        }
-      }
-      .modal_desc {
-        font-size: 15px;
-        font-weight: 400;
-        color: ${pallete.MENU_OPTIONS_COLOR};
+    .modal_head_title_wrap {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      cursor: pointer;
+      .addButton {
+        color: ${pallete.ICON_COLOR_RED};
       }
     }
+    .modal_header {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      font-size: 20px;
+      font-weight: 500;
+      .drawer_memu_back {
+        cursor: pointer;
+      }
+    }
+    .modal_desc {
+      font-size: 15px;
+      font-weight: 400;
+      color: ${pallete.MENU_OPTIONS_COLOR};
+    }
+  }
   .editcard_sec_list {
     border: 1px solid ${pallete.MENU_OPTIONS_COLOR};
     overflow: scroll;

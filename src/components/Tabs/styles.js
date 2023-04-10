@@ -40,12 +40,13 @@ export const TabCardsPreview = styled.div`
     .card_title {
       display: flex;
       align-items: center;
-      font-size: 20px;
+      font-size: 18px;
       font-weight: 600;
       gap: 8px;
       color: ${pallete.BUTTON_COLOR_BLACK};
       .title_icon {
         width: 25px;
+        margin-right: 5px;
       }
     }
     .edit_icon {
@@ -365,5 +366,46 @@ border-bottom: 1px solid ${pallete.MENU_OPTIONS_COLOR};
 `
 
 export const EditInfoPreview = styled.div`
-
+.info_preview_main {
+  .edit_preview {
+  display: flex;
+  margin-top: 20px;
+  flex-direction: column;
+  .edit_preview_title {
+      border-radius: 4px;
+      padding: 10px;
+      font-size: 15px;
+      font-weight: bold;
+      border: none;
+      outline-color: ${pallete.ICON_COLOR_RED};
+      background: ${pallete.BACKGROUND_COLOR};
+  }
+  .edit_preview_desc {
+    margin-top: 10px;
+      border-radius: 4px;
+      height: 200px;
+      padding: 10px;
+      line-height: 20px;
+      border: none;
+      background: ${pallete.BACKGROUND_COLOR};
+      outline-color: ${pallete.ICON_COLOR_RED};
+  }
+  }
+}
+.add_text_block {
+    width: 100%;
+    height: 45px;
+    border-radius: 8px;
+    font-size: 15px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    gap: 30px;
+    margin-top: 20px;
+    color: ${pallete.BACKGROUND_COLOR_WHITE};
+    background: ${pallete.ICON_COLOR_RED};
+    .plus_icon {
+      margin-right: 10px;
+    }
+  }
 `

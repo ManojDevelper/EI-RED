@@ -1,21 +1,10 @@
-import React, { useState } from 'react';
-import Header from "../../components/Header";
-import Drawer from "../../components/Drawer";
+import React from 'react';
 import TabCards from "./tabCards";
-import { TabsSectionPreview, DiaplayHeader } from "./styles";
-import { Button, Space, Tabs } from 'antd';
-import logo from "../../assets/images/logo.png";
-import verify from "../../assets/icons/verify.svg";
-import verify_disable from "../../assets/icons/verify_disable.svg";
-import digital_round from "../../assets/images/digital_round.svg";
-import { EditFilled } from '@ant-design/icons';
-import contact from "../../assets/icons/contact.svg";
-import location from "../../assets/icons/location.svg";
-import links from "../../assets/icons/links.svg";
-import work from "../../assets/icons/work.svg";
-import quotes from "../../assets/icons/quotes.svg";
+import { TabsSectionPreview } from "./styles";
+import { Tabs } from 'antd';
 import ContentPreview from "./ContentPreview";
 import { privacyPolicyMock, termsConditions } from "../../utils/mock";
+import ComingSoon from "../ComingSoon";
 
 
 const TabsSection = () => {
@@ -33,12 +22,12 @@ const TabsSection = () => {
         {
             key: '2',
             label: `Faq`,
-            children: `Content of Tab Pane 2`,
+            children: <ComingSoon />,
         },
         {
             key: '3',
             label: `Complaints and feedback`,
-            children: `Content of Tab Pane 3`,
+            children: <ComingSoon />,
         },
         {
             key: '4',
