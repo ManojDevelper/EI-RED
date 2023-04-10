@@ -1,14 +1,9 @@
-import React from "react";
+import logo from './logo.svg';
 import './App.css';
-import { BrowserRouter } from "react-router-dom";
-import RouterComponent from "./Router";
+import AboutUs from "./pages/Aboutus";
 function App() {
   return (
-    <>
-      <BrowserRouter>
-        <RouterComponent />
-      </BrowserRouter>
-    </>
+    <AboutUs />
   );
 }
 
