@@ -22,6 +22,7 @@ import facebook from "../../assets/icons/facebook.svg";
 import twitter from "../../assets/icons/twitter.svg";
 import { useSelector, useDispatch } from 'react-redux';
 import { setStatements, setShowContactModal } from "../../redux/reducer";
+import { openNotificationWithIcon } from "../../utils/functions";
 
 const TabCards = () => {
 
@@ -92,6 +93,7 @@ const TabCards = () => {
     const saveEditedAddress = () => {
         setAddress({ ...tempaddress });
         setOpenAddressModal(false);
+        openNotificationWithIcon("success", "Address saved successfully");
     };
 
 
@@ -113,6 +115,7 @@ const TabCards = () => {
     const saveEditedLinks = () => {
         setLinks({ ...templinks });
         setOpenLinksModal(false);
+        openNotificationWithIcon("success", "Links Updated successfully");
     };
 
     // edit statements
@@ -155,6 +158,7 @@ const TabCards = () => {
         dispatch(setStatements({
             statements: tempArr?.filter((itm) => itm.value !== "")
         }));
+        openNotificationWithIcon("success", "Statements Added successfully");
     }
 
 

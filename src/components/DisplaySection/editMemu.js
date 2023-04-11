@@ -12,6 +12,7 @@ import {
 import contact from "../../assets/icons/contact.svg";
 import { useSelector, useDispatch } from 'react-redux';
 import { setEditContact, setDataObject, setShowContactModal } from '../../redux/reducer';
+import { openNotificationWithIcon } from "../../utils/functions";
 
 
 
@@ -92,12 +93,14 @@ const EditMenu = () => {
         dispatch(setEditContact({
             arr: tempArr
         }));
+        openNotificationWithIcon("success", "Contact saved successfully");
         setEditContactShow(false);
     }
 
     const deleteCardFun = (index) => {
         const tempArr = [...editState.editContact];
-        const newKK = tempArr.filter((item, ind) => ind !== index)
+        const newKK = tempArr.filter((item, ind) => ind !== index);
+        openNotificationWithIcon("success", "Deleted successfully");
         dispatch(setEditContact({
             arr: newKK
         }));
