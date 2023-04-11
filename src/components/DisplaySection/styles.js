@@ -145,9 +145,9 @@ export const EditMenuBody = styled.div`
 `;
 
 export const TabCardsPreview = styled.div`
-  border:${convertPixlPopup(1)} solid ${pallete.MENU_OPTIONS_COLOR};
-  border-radius:${convertPixlPopup(8)};
-  padding:${convertPixlPopup(8)} ${convertPixlPopup(25)};
+  border: ${convertPixlPopup(1)} solid ${pallete.MENU_OPTIONS_COLOR};
+  border-radius: ${convertPixlPopup(8)};
+  padding: ${convertPixlPopup(8)} ${convertPixlPopup(25)};
   .card_header {
     display: flex;
     align-items: center;
@@ -157,7 +157,7 @@ export const TabCardsPreview = styled.div`
       align-items: center;
       font-size: ${convertPixlPopup(15)};
       font-weight: 500;
-      gap:${convertPixlPopup(8)};
+      gap: ${convertPixlPopup(8)};
       color: ${pallete.BUTTON_COLOR_BLACK};
       .title_icon {
         width: ${convertPixlPopup(20)};
@@ -165,7 +165,7 @@ export const TabCardsPreview = styled.div`
     }
     .card_icons {
       display: flex;
-      gap:${convertPixlPopup(8)};
+      gap: ${convertPixlPopup(8)};
       .edit_icon {
         font-size: ${convertPixlPopup(18)};
         cursor: pointer;
@@ -238,7 +238,7 @@ export const TabCardsPreview = styled.div`
     margin: ${convertPixlPopup(40)} auto 0 auto;
     .icon_cont {
       display: flex;
-      gap:${convertPixlPopup(5)};
+      gap: ${convertPixlPopup(5)};
       flex-direction: column;
       font-size: ${convertPixlPopup(10)};
       align-items: center;
@@ -284,12 +284,12 @@ export const EditCardData = styled.div`
     }
   }
   .editcard_sec_list {
-    border:${convertPixlPopup(1)} solid ${pallete.MENU_OPTIONS_COLOR};
+    border: ${convertPixlPopup(1)} solid ${pallete.MENU_OPTIONS_COLOR};
     overflow: scroll;
     max-height: ${convertPixlPopup(80)};
-    border-radius:${convertPixlPopup(8)};
+    border-radius: ${convertPixlPopup(8)};
     ::-webkit-scrollbar {
-      width:${convertPixlPopup(5)};
+      width: ${convertPixlPopup(5)};
     }
 
     /* Track */
@@ -312,7 +312,7 @@ export const EditCardData = styled.div`
     overflow: scroll;
     overflow-x: hidden;
     ::-webkit-scrollbar {
-      width:${convertPixlPopup(5)};
+      width: ${convertPixlPopup(5)};
     }
 
     /* Track */
@@ -343,7 +343,7 @@ export const EditCardData = styled.div`
       }
       input {
         height: ${convertPixlPopup(40)};
-        border-radius:${convertPixlPopup(4)};
+        border-radius: ${convertPixlPopup(4)};
         border: none;
         outline: none;
         padding: 0 0 0 ${convertPixlPopup(10)};
@@ -358,7 +358,7 @@ export const EditCardData = styled.div`
     .add_more_btn {
       width: 100%;
       height: ${convertPixlPopup(40)};
-      border-radius:${convertPixlPopup(8)};
+      border-radius: ${convertPixlPopup(8)};
       border: none;
       outline: none;
       font-size: ${convertPixlPopup(12)};
@@ -382,7 +382,7 @@ export const EditCardData = styled.div`
   .save_btn {
     width: 100%;
     height: ${convertPixlPopup(50)};
-    border-radius:${convertPixlPopup(8)};
+    border-radius: ${convertPixlPopup(8)};
     font-size: ${convertPixlPopup(15)};
     border: none;
     outline: none;

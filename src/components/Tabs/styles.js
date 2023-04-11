@@ -149,7 +149,7 @@ export const AddressModalStyle = styled.div`
     width: 95%;
     height: ${convertPixlPopup(106)};
     padding: ${convertPixlPopup(10)};
-    border-radius:${convertPixlPopup(8)};
+    border-radius: ${convertPixlPopup(8)};
     background: ${pallete.BACKGROUND_COLOR};
     border: none;
     outline: none;
