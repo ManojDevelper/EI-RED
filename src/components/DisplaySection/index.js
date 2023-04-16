@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import TabsSection from "../Tabs";
 import EditMenu from "./editMemu";
+import EditPencil from "../../assets/icons/edit.svg";
 import { DisplaySectionPreview, DiaplayHeader } from "./styles";
 import { Modal } from 'antd';
 import logo from "../../assets/images/logo.png";
 import verify from "../../assets/icons/verify.svg";
 import verify_disable from "../../assets/icons/verify_disable.svg";
-import { EditFilled } from '@ant-design/icons';
 import { AddressModalStyle } from '../Tabs/styles';
 
 
@@ -35,7 +35,7 @@ const DisplaySection = () => {
                 </div>
                 <div className='compo_edit_wrapper'>
                     <p className='comp_description'>{description}</p>
-                    <EditFilled className="edit_icon" onClick={() => setdescFun()} />
+                    <img src={EditPencil} alt="EditPencil" className='edit_icon' onClick={() => setdescFun()} />
                 </div>
             </DiaplayHeader>
             <TabsSection />

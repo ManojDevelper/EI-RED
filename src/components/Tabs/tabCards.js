@@ -20,6 +20,7 @@ import globe from "../../assets/icons/globe.svg";
 import instagram from "../../assets/icons/instagram.svg";
 import facebook from "../../assets/icons/facebook.svg";
 import twitter from "../../assets/icons/twitter.svg";
+import EditPencil from "../../assets/icons/edit.svg";
 import { useSelector, useDispatch } from 'react-redux';
 import { setStatements, setShowContactModal } from "../../redux/reducer";
 import { openNotificationWithIcon } from "../../utils/functions";
@@ -168,7 +169,8 @@ const TabCards = () => {
             <TabCardsPreview>
                 <div className='card_header'>
                     <span className='card_title'><img src={contact} className="title_icon" alt="contact" />Contact</span>
-                    <EditFilled className="edit_icon" onClick={() => dispatch(setShowContactModal({ bool: true }))} />
+                    {/* <EditFilled className="edit_icon" onClick={() => dispatch(setShowContactModal({ bool: true }))} /> */}
+                    <img src={EditPencil} alt="EditPencil" className='edit_icon' onClick={() => dispatch(setShowContactModal({ bool: true }))} />
                 </div>
                 <div className='card_body'>
                     <div className='mail_sec'>
@@ -188,7 +190,8 @@ const TabCards = () => {
             <TabCardsPreview>
                 <div className='card_header'>
                     <span className='card_title'><img src={location} className="title_icon" alt="location" />Address</span>
-                    <EditFilled className="edit_icon" onClick={() => setAddressFun()} />
+                    {/* <EditFilled className="edit_icon" onClick={() => setAddressFun()} /> */}
+                    <img src={EditPencil} alt="EditPencil" className='edit_icon' onClick={() => setAddressFun()} />
                 </div>
                 <div className='card_body_single'>
                     {address?.floorNo}, {address?.area}, {address?.landmark},
@@ -199,7 +202,8 @@ const TabCards = () => {
             <TabCardsPreview>
                 <div className='card_header'>
                     <span className='card_title'><img src={work} className="title_icon" alt="work" />House of operations</span>
-                    <EditFilled className="edit_icon" onClick={() => editHop()} />
+                    {/* <EditFilled className="edit_icon" onClick={() => editHop()} /> */}
+                    <img src={EditPencil} alt="EditPencil" className='edit_icon' onClick={() => editHop()} />
                 </div>
                 <div className='card_body_single'>
                     {HOP}
@@ -209,7 +213,8 @@ const TabCards = () => {
             <TabCardsPreview>
                 <div className='card_header'>
                     <span className='card_title'><img src={linksmain} className="title_icon" alt="img" />Social Media & Links</span>
-                    <EditFilled className="edit_icon" onClick={() => setLinksFun()} />
+                    {/* <EditFilled className="edit_icon" onClick={() => setLinksFun()} /> */}
+                    <img src={EditPencil} alt="EditPencil" className='edit_icon' onClick={() => setLinksFun()} />
                 </div>
                 <div className='card_body_icons'>
                     <div className='icon_cont'>
@@ -234,7 +239,8 @@ const TabCards = () => {
             <TabCardsPreview>
                 <div className='card_header'>
                     <span className='card_title'><img src={quotes} className="title_icon" alt="img" />Statement</span>
-                    <EditFilled className="edit_icon" onClick={() => setOpenStatementModal(true)} />
+                    {/* <EditFilled className="edit_icon" onClick={() => setOpenStatementModal(true)} /> */}
+                    <img src={EditPencil} alt="EditPencil" className='edit_icon' onClick={() => setOpenStatementModal(true)} />
                 </div>
                 <div className='card_body'>
                     <div className='mail_sec'>

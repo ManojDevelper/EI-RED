@@ -5,26 +5,23 @@ import { convertPixlPopup } from "../../utils/functions";
 export const TabCardsPreviewMain = styled.div`
   display: grid;
   gap: ${convertPixlPopup(20)};
-  margin-top: ${convertPixlPopup(30)};
-  grid-template-columns: ${convertPixlPopup(360)} ${convertPixlPopup(360)} ${convertPixlPopup(
-  360
-)};
+  margin-top: ${convertPixlPopup(10)};
+  grid-template-columns: ${convertPixlPopup(380)} ${convertPixlPopup(380)} ${convertPixlPopup(380)};
+  grid-template-rows: ${convertPixlPopup(170)} ${convertPixlPopup(170)};
   .ant-drawer-header {
     display: none !important;
   }
 `;
 export const TabsSectionPreview = styled.div`
-  .tabsec_title {
-    font-size: ${convertPixlPopup(20)};
-    font-weight: 500;
-    color: ${pallete.BUTTON_COLOR_BLACK};
-  }
   .ant-tabs-nav-list {
     gap: ${convertPixlPopup(50)} !important;
   }
   .ant-tabs-tab-btn {
     font-size: ${convertPixlPopup(18)} !important;
-    font-weight: 400 !important;
+    font-weight: 500 !important;
+    color: ${pallete.TEXT_GRAY_COLOR} !important;
+  }
+  .ant-tabs-tab-active   .ant-tabs-tab-btn {
     color: ${pallete.BUTTON_COLOR_BLACK} !important;
   }
   .ant-tabs-ink-bar {
@@ -33,7 +30,7 @@ export const TabsSectionPreview = styled.div`
 `;
 
 export const TabCardsPreview = styled.div`
-  border: ${convertPixlPopup(1)} solid ${pallete.MENU_OPTIONS_COLOR};
+border: 1px solid ${pallete.CARD_BORDER_COLOR};
   border-radius: ${convertPixlPopup(8)};
   padding: ${convertPixlPopup(8)} ${convertPixlPopup(25)};
   .card_header {
@@ -43,8 +40,8 @@ export const TabCardsPreview = styled.div`
     .card_title {
       display: flex;
       align-items: center;
-      font-size: ${convertPixlPopup(18)};
-      font-weight: 600;
+      font-size: ${convertPixlPopup(22.5)};
+      font-weight: 500;
       gap: ${convertPixlPopup(8)};
       color: ${pallete.BUTTON_COLOR_BLACK};
       .title_icon {
@@ -53,28 +50,28 @@ export const TabCardsPreview = styled.div`
       }
     }
     .edit_icon {
-      font-size: ${convertPixlPopup(18)};
+      width: ${convertPixlPopup(18)};
       cursor: pointer;
       color: ${pallete.ICON_COLOR_RED};
-      margin-top: ${convertPixlPopup(13)};
+      margin-top: ${convertPixlPopup(0)};
     }
   }
 
   .card_body {
     display: flex;
-    margin-top: ${convertPixlPopup(40)};
+    margin-top: ${convertPixlPopup(25)};
     justify-content: space-between;
     .mail_sec {
       display: flex;
-      align-items: center;
       gap: ${convertPixlPopup(10)};
       .mail_icon {
-        font-size: ${convertPixlPopup(15)};
+        font-size: ${convertPixlPopup(17)};
         color: ${pallete.MENU_OPTIONS_COLOR};
+        margin-top: ${convertPixlPopup(10)};
       }
       .mails {
-        font-size: ${convertPixlPopup(15)};
-        font-weight: 500;
+        font-size: ${convertPixlPopup(17)};
+        font-weight: 400;
         color: ${pallete.BUTTON_COLOR_BLACK};
       }
     }
@@ -97,13 +94,14 @@ export const TabCardsPreview = styled.div`
     display: flex;
     align-items: center;
     gap: ${convertPixlPopup(10)};
+    margin-top: ${convertPixlPopup(8)};
     .phone_icon {
       font-size: ${convertPixlPopup(15)};
       color: ${pallete.MENU_OPTIONS_COLOR};
     }
     .phone {
-      font-size: ${convertPixlPopup(15)};
-      font-weight: 500;
+      font-size: ${convertPixlPopup(17)};
+      font-weight: 400;
       color: ${pallete.BUTTON_COLOR_BLACK};
     }
   }

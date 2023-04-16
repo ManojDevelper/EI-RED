@@ -11,7 +11,7 @@ export const DisplaySectionPreview = styled.div`
 
 export const DiaplayHeader = styled.div`
   .tab_title {
-    font-size: ${convertPixlPopup(30)};
+    font-size: ${convertPixlPopup(29)};
     font-weight: 600;
     color: ${pallete.BUTTON_COLOR_BLACK};
   }
@@ -27,13 +27,14 @@ export const DiaplayHeader = styled.div`
     .comp_details_wrap {
       margin-left: ${convertPixlPopup(20)};
       .comp_title {
-        font-size: ${convertPixlPopup(20)};
+        font-size: ${convertPixlPopup(23)};
         font-weight: 600;
         color: ${pallete.BUTTON_COLOR_BLACK};
       }
       .compo_desc {
-        font-size: ${convertPixlPopup(18)};
-        color: ${pallete.MENU_OPTIONS_COLOR};
+        font-size: ${convertPixlPopup(19.5)};
+        font-weight: 450;
+        color: ${pallete.TEXT_GRAY_COLOR};
       }
     }
 
@@ -58,12 +59,11 @@ export const DiaplayHeader = styled.div`
     .comp_description {
       color: ${pallete.MENU_OPTIONS_COLOR};
       font-size: ${convertPixlPopup(16)};
+      font-weight: 400 !important;
     }
     .edit_icon {
-      font-size: ${convertPixlPopup(25)};
-      cursor: pointer;
-      color: ${pallete.ICON_COLOR_RED};
-      margin: ${convertPixlPopup(13)} 0 0 ${convertPixlPopup(10)};
+      width: ${convertPixlPopup(25)};
+      margin: ${convertPixlPopup(0)} 0 30px ${convertPixlPopup(0)};
     }
   }
 `;

@@ -20,9 +20,11 @@ const initialState = {
         phone: ["9494978555", "94949785553"]
     },
     showContactModal: false,
-    editEmail: ["salesteam@br.in", "salesteam2@br.in"],
+    editEmail: [],
 
     editPhone: [],
+
+    editContactShow: false,
 
     statements: [{ value: "Write Down The statements of the company", edit: false, id: Math.random() }, { value: "Write Down The statements of the company", edit: false, id: Math.random() }],
 }
@@ -38,15 +40,18 @@ export const counterSlice = createSlice({
             state.dataObject = action.payload.object
         },
         setShowContactModal: (state, action) => {
-            console.log("action.payload.bool", action.payload.bool)
             state.showContactModal = action.payload.bool
         },
         setEditEmail: (state, action) => {
-            state.editEmail = action.payload.email
+            state.editEmail = action.payload
         },
 
         setEditPhone: (state, action) => {
-            state.editPhone = action.payload.phone
+            state.editPhone = action.payload
+        },
+
+        setEditContactShow: (state, action) => {
+            state.editContactShow = action.payload
         },
 
         setStatements: (state, action) => {
@@ -62,6 +67,7 @@ export const {
     setShowContactModal,
     setEditEmail,
     setEditPhone,
+    setEditContactShow,
     setStatements
 } = counterSlice.actions
 

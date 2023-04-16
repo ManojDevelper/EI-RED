@@ -15,7 +15,7 @@ const AboutUs = () => {
   }, [])
   return (
     <Fragment>
-      {show ?
+      {/* {show ?
         <div id="loader">
           <div id="image_container">
             <div id="img1_cont">
@@ -32,7 +32,15 @@ const AboutUs = () => {
             <DisplaySection />
           </BottomWrapper>
         </Fragment>
-      }
+      } */}
+
+      <Fragment>
+        <Header />
+        <BottomWrapper>
+          <Drawer />
+          <DisplaySection />
+        </BottomWrapper>
+      </Fragment>
     </Fragment>
   )
 }

@@ -22,7 +22,7 @@ const Header = () => {
 
                 <div className='user_container'>
                     <img src={user_icon} className='user_image' alt="user_icon" />
-                    <span className='user_name'>Manoj Ponugoti</span>
+                    <span className='user_name'>User Admin</span>
                     <DownOutlined className='dropdown_icon' />
                 </div>
             </div>

@@ -21,7 +21,7 @@ const TabsSection = () => {
         },
         {
             key: '2',
-            label: `Faq`,
+            label: `FAQ`,
             children: <ComingSoon />,
         },
         {
@@ -47,7 +47,6 @@ const TabsSection = () => {
 
     return (
         <TabsSectionPreview>
-            <h2 className='tabsec_title'>compVerify</h2>
             <Tabs defaultActiveKey="1" items={items} onChange={onChange} />
         </TabsSectionPreview>
     )

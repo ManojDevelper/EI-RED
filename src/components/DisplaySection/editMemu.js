@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { EditMenuPreview, TabCardsPreview, EditMenuBody, EditCardData } from "./styles";
 import { Drawer } from 'antd';
 import {
@@ -11,8 +11,21 @@ import {
 } from '@ant-design/icons';
 import contact from "../../assets/icons/contact.svg";
 import { useSelector, useDispatch } from 'react-redux';
-import { setEditContact, setDataObject, setShowContactModal } from '../../redux/reducer';
-import { openNotificationWithIcon } from "../../utils/functions";
+import {
+    setShowContactModal,
+    setEditContactShow
+} from '../../redux/reducer';
+import {
+    addNewContactCardFun,
+    setItemFun,
+    editNameFun,
+    emailEditFun,
+    phoneEditFun,
+    addEmailContainer,
+    addPhoneContainer,
+    saveContactFun,
+    deleteCardFun
+} from "./Functions/functions";
 
 
 
@@ -21,102 +34,16 @@ const EditMenu = () => {
     const editState = useSelector((state) => state.compEditor);
     const dispatch = useDispatch();
 
-    const [editEmail, setEditEmail] = useState([]);
-    const [editPhone, setEditPhone] = useState([]);
-    const [editContactShow, setEditContactShow] = useState(false);
-
-
-    const addNewContactCardFun = () => {
-        const tempArr = [...editState.editContact];
-        tempArr.push({
-            team: "",
-            email: [],
-            phone: []
-        });
-        setItemFun(tempArr[tempArr.length - 1], tempArr.length - 1)
-    }
-
-    const setItemFun = (item, index) => {
-        const tempArr = { ...item };
-        setEditEmail([...tempArr.email]);
-        setEditPhone([...tempArr.phone]);
-        setEditContactShow(true);
-        console.log("item", { item, index })
-        dispatch(setDataObject({
-            object: {
-                ...tempArr,
-                id: index
-            }
-        }));
-    }
-
-
-    const editNameFun = (value) => {
-        const tempObj = JSON.parse(JSON.stringify(editState.dataObject));
-        dispatch(setDataObject({
-            object: { ...tempObj, team: value }
-        }));
-    }
-
-    const emailEditFun = (value, index) => {
-        const tempArr = [...editEmail];
-        tempArr[index] = value;
-        console.log("tempArr", tempArr)
-        setEditEmail(tempArr);
-    }
-
-    const phoneEditFun = (value, index) => {
-        const tempArr = [...editPhone];
-        tempArr[index] = value;
-        setEditPhone(tempArr);
-    }
-
-    const addEmailContainer = () => {
-        const tempArr = [...editEmail];
-        tempArr.push("");
-        setEditEmail(tempArr);
-    }
-
-    const addPhoneContainer = () => {
-        const tempArr = [...editPhone];
-        tempArr.push("");
-        setEditPhone(tempArr);
-    }
-
-    const saveContactFun = () => {
-        const tempArr = [...editState.editContact];
-        tempArr[editState.dataObject.id] = {
-            team: editState.dataObject.team,
-            email: editEmail.filter((item) => item !== ""),
-            phone: editPhone.filter((item) => item !== "")
-        };
-        dispatch(setEditContact({
-            arr: tempArr
-        }));
-        openNotificationWithIcon("success", "Contact saved successfully");
-        setEditContactShow(false);
-    }
-
-    const deleteCardFun = (index) => {
-        const tempArr = [...editState.editContact];
-        const newKK = tempArr.filter((item, ind) => ind !== index);
-        openNotificationWithIcon("success", "Deleted successfully");
-        dispatch(setEditContact({
-            arr: newKK
-        }));
-    }
-
-
     return (
         <EditMenuPreview>
             <Drawer title="Contacts" placement="right" open={editState.showContactModal} headerStyle={{ display: `none` }}>
-                {!editContactShow
+                {!editState.editContactShow
                     ?
                     <EditMenuBody>
                         <div className='addressModalHeader'>
                             <div className='modal_head_title_wrap'>
                                 <h1 className='modal_header'><ArrowLeftOutlined className='drawer_memu_back' onClick={() => { dispatch(setShowContactModal({ bool: false })) }} />Contacts</h1>
-                                <span className='addButton' onClick={() => addNewContactCardFun()}><PlusCircleOutlined /> add</span>
+                                <span className='addButton' onClick={() => addNewContactCardFun(editState)}><PlusCircleOutlined /> add</span>
                             </div>
                             <span className='modal_desc'>Please provide the company emails and contacts</span>
                         </div>
@@ -127,8 +54,8 @@ const EditMenu = () => {
                                         <div className='card_header'>
                                             <span className='card_title'><img src={contact} className="title_icon" alt="img" />{item?.team}</span>
                                             <div className='card_icons'>
-                                                <EditFilled className="edit_icon" onClick={() => setItemFun(item, index)} />
-                                                <DeleteOutlined className="edit_icon" onClick={() => deleteCardFun(index)} />
+                                                <EditFilled className="edit_icon" onClick={() => setItemFun(item, index, editState)} />
+                                                <DeleteOutlined className="edit_icon" onClick={() => deleteCardFun(index, editState)} />
                                             </div>
                                         </div>
                                         <div className='card_body'>
@@ -151,41 +78,41 @@ const EditMenu = () => {
                     <EditCardData>
                         <div className='addressModalHeader'>
                             <div className='modal_head_title_wrap'>
-                                <h1 className='modal_header'><ArrowLeftOutlined className='drawer_memu_back' onClick={() => setEditContactShow(false)} />Contacts</h1>
+                                <h1 className='modal_header'><ArrowLeftOutlined className='drawer_memu_back' onClick={() => { dispatch(setEditContactShow(false)) }} />Contacts</h1>
                             </div>
                             <span className='modal_desc'>Please provide the company emails and contacts</span>
                         </div>
                         <div className='edit_card_data_main'>
-                            <div className='edit_main_sec team_name_div'>
+                            {/* <div className='edit_main_sec team_name_div'>
                                 <span className='input_label'>Team Name</span>
-                                <input value={editState.dataObject.team} type="text" placeholder="eg. Client Management" onChange={(e) => editNameFun(e.target.value)} className='input' />
-                            </div>
+                                <input value={editState.dataObject.team} type="text" placeholder="eg. Client Management" onChange={(e) => editNameFun(e.target.value, editState)} className='input' />
+                            </div> */}
 
                             <div className='editcard_sec'>
                                 <div className='edit_main_sec'>
                                     <span className='input_label'>Email Id</span>
-                                    {editEmail?.map((item, index) => {
+                                    {editState.editEmail?.map((item, index) => {
                                         return (
-                                            <input value={item} type="text" placeholder="eg.services@gmail.com" className='input' onChange={(e) => emailEditFun(e.target.value, index)} key={index} />
+                                            <input value={item} type="text" placeholder="eg.services@gmail.com" className='input' onChange={(e) => emailEditFun(e.target.value, index, editState)} key={index} />
                                         )
                                     })}
                                 </div>
-                                <button className='add_more_btn' onClick={() => addEmailContainer()}><PlusCircleOutlined className='addMore' />Add More</button>
+                                <button className='add_more_btn' onClick={() => addEmailContainer(editState)}><PlusCircleOutlined className='addMore' />Add More</button>
                             </div>
 
                             <div className='editcard_sec'>
                                 <div className='edit_main_sec'>
                                     <span className='input_label'>Contact Number</span>
-                                    {editPhone?.map((item, index) => {
+                                    {editState.editPhone?.map((item, index) => {
                                         return (
-                                            <input value={item} type="text" placeholder="eg. 9494978553" className='input' onChange={(e) => phoneEditFun(e.target.value, index)} key={index} />
+                                            <input value={item} type="text" placeholder="eg. 9494978553" className='input' onChange={(e) => phoneEditFun(e.target.value, index, editState)} key={index} />
                                         )
                                     })}
                                 </div>
-                                <button className='add_more_btn' onClick={() => addPhoneContainer()}><PlusCircleOutlined className='addMore' />Add More</button>
+                                <button className='add_more_btn' onClick={() => addPhoneContainer(editState)}><PlusCircleOutlined className='addMore' />Add More</button>
                             </div>
                         </div>
-                        <button className='save_btn' onClick={() => { saveContactFun() }}>Save</button>
+                        <button className='save_btn' onClick={() => { saveContactFun(editState) }}>Save</button>
                     </EditCardData>
                 }
             </Drawer>
