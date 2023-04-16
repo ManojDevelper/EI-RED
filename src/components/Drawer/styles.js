@@ -3,7 +3,7 @@ import * as pallete from "../../utils/varibles";
 import { convertPixlPopup } from "../../utils/functions";
 
 export const DrawerSection = styled.div`
-  width: 260px;
+  width: 290px;
   padding: ${convertPixlPopup(40)} ${convertPixlPopup(10)};
   display: flex;
   flex-direction: column;
@@ -40,7 +40,7 @@ export const DrawerButton = styled.div`
   font-size: ${convertPixlPopup(12)};
   letter-spacing: ${convertPixlPopup(0.2)};
   color: #bababa;
-  padding: ${convertPixlPopup(16)} ${convertPixlPopup(47)}
+  padding: ${convertPixlPopup(16)} 0
     ${convertPixlPopup(16)} ${convertPixlPopup(19)};
   border-radius: ${convertPixlPopup(10)};
   cursor: pointer;
@@ -55,7 +55,7 @@ export const NoteSection = styled.div`
   ${'' /* border: ${convertPixlPopup(3)} solid #c4c4c4; */}
   border-radius: ${convertPixlPopup(8)};
   padding: ${convertPixlPopup(10)} 0 0 0;
-  margin-top: ${convertPixlPopup(50)};
+  margin-top: ${convertPixlPopup(30)};
   box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
   .note_icon {
     width: ${convertPixlPopup(35)};

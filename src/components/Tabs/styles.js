@@ -6,13 +6,16 @@ export const TabCardsPreviewMain = styled.div`
   display: grid;
   gap: ${convertPixlPopup(20)};
   margin-top: ${convertPixlPopup(10)};
-  grid-template-columns: ${convertPixlPopup(380)} ${convertPixlPopup(380)} ${convertPixlPopup(380)};
-  grid-template-rows: ${convertPixlPopup(170)} ${convertPixlPopup(170)};
+  grid-template-columns: ${convertPixlPopup(380)} ${convertPixlPopup(380)} ${convertPixlPopup(
+  380
+)};
+  grid-template-rows: ${convertPixlPopup(195)} ${convertPixlPopup(195)};
   .ant-drawer-header {
     display: none !important;
   }
 `;
 export const TabsSectionPreview = styled.div`
+  margin-top: ${convertPixlPopup(40)};
   .ant-tabs-nav-list {
     gap: ${convertPixlPopup(50)} !important;
   }
@@ -21,7 +24,7 @@ export const TabsSectionPreview = styled.div`
     font-weight: 500 !important;
     color: ${pallete.TEXT_GRAY_COLOR} !important;
   }
-  .ant-tabs-tab-active   .ant-tabs-tab-btn {
+  .ant-tabs-tab-active .ant-tabs-tab-btn {
     color: ${pallete.BUTTON_COLOR_BLACK} !important;
   }
   .ant-tabs-ink-bar {
@@ -30,9 +33,10 @@ export const TabsSectionPreview = styled.div`
 `;
 
 export const TabCardsPreview = styled.div`
-border: 1px solid ${pallete.CARD_BORDER_COLOR};
+  cursor: pointer;
+  border: 1px solid ${pallete.CARD_BORDER_COLOR};
   border-radius: ${convertPixlPopup(8)};
-  padding: ${convertPixlPopup(8)} ${convertPixlPopup(25)};
+  padding: ${convertPixlPopup(20)} ${convertPixlPopup(25)} 0 ${convertPixlPopup(25)};
   .card_header {
     display: flex;
     align-items: center;
@@ -94,7 +98,7 @@ border: 1px solid ${pallete.CARD_BORDER_COLOR};
     display: flex;
     align-items: center;
     gap: ${convertPixlPopup(10)};
-    margin-top: ${convertPixlPopup(8)};
+    margin-top: ${convertPixlPopup(15)};
     .phone_icon {
       font-size: ${convertPixlPopup(15)};
       color: ${pallete.MENU_OPTIONS_COLOR};
@@ -107,8 +111,8 @@ border: 1px solid ${pallete.CARD_BORDER_COLOR};
   }
 
   .card_body_single {
-    font-size: ${convertPixlPopup(15)};
-    font-weight: 400;
+    font-size: ${convertPixlPopup(17)};
+    font-weight: 450;
     margin-top: ${convertPixlPopup(40)};
     color: ${pallete.BUTTON_COLOR_BLACK};
   }
@@ -135,6 +139,10 @@ border: 1px solid ${pallete.CARD_BORDER_COLOR};
         }
       }
     }
+  }
+
+  &:hover {
+    border: 2px solid ${pallete.ICON_COLOR_RED};
   }
 `;
 

@@ -17,6 +17,7 @@ export const DiaplayHeader = styled.div`
   }
   .logo_sec {
     display: flex;
+    margin-top: ${convertPixlPopup(50)};
     .logo {
       width: ${convertPixlPopup(50)};
       height: ${convertPixlPopup(50)};
@@ -145,9 +146,13 @@ export const EditMenuBody = styled.div`
 `;
 
 export const TabCardsPreview = styled.div`
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+  height: 120px;
   border: ${convertPixlPopup(1)} solid ${pallete.MENU_OPTIONS_COLOR};
   border-radius: ${convertPixlPopup(8)};
-  padding: ${convertPixlPopup(8)} ${convertPixlPopup(25)};
+  padding: ${convertPixlPopup(20)} ${convertPixlPopup(25)};
   .card_header {
     display: flex;
     align-items: center;
@@ -167,10 +172,10 @@ export const TabCardsPreview = styled.div`
       display: flex;
       gap: ${convertPixlPopup(8)};
       .edit_icon {
-        font-size: ${convertPixlPopup(18)};
+        width: ${convertPixlPopup(18)};
         cursor: pointer;
         color: ${pallete.ICON_COLOR_RED};
-        margin-top: ${convertPixlPopup(13)};
+        margin-top: ${convertPixlPopup(10)};
       }
     }
   }
@@ -189,7 +194,7 @@ export const TabCardsPreview = styled.div`
       }
       .mails {
         font-size: ${convertPixlPopup(15)};
-        font-weight: 400;
+        font-weight: 450;
         color: ${pallete.BUTTON_COLOR_BLACK};
       }
     }
@@ -347,7 +352,7 @@ export const EditCardData = styled.div`
         border: none;
         outline: none;
         padding: 0 0 0 ${convertPixlPopup(10)};
-        background: ${pallete.BACKGROUND_COLOR};
+        background: ${pallete.INPUT_GRAY_COLOR};
       }
     }
 

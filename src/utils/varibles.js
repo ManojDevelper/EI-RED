@@ -8,3 +8,4 @@ export const LINK_COLORS = '#80B4F6';
 export const ICON_COLOR_RED = '#E72D38';
 export const TEXT_GRAY_COLOR = '#808080';
 export const CARD_BORDER_COLOR = '#C4C4C4';
+export const INPUT_GRAY_COLOR = '#F7F7F7';

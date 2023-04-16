@@ -5,7 +5,7 @@ import { convertPixlPopup } from "../../utils/functions";
 export const HeaderSection = styled.div`
   display: flex;
   align-items: center;
-  padding: ${convertPixlPopup(5)} ${convertPixlPopup(35)};
+  padding: ${convertPixlPopup(10)} ${convertPixlPopup(35)};
   background: ${pallete.BACKGROUND_COLOR_WHITE};
   justify-content: space-between;
   .headerSection {

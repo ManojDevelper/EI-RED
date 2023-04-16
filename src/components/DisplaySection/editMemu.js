@@ -3,22 +3,20 @@ import { EditMenuPreview, TabCardsPreview, EditMenuBody, EditCardData } from "./
 import { Drawer } from 'antd';
 import {
     PlusCircleOutlined,
-    EditFilled,
-    DeleteOutlined,
     MailFilled,
-    PhoneFilled,
-    ArrowLeftOutlined
+    PhoneFilled
 } from '@ant-design/icons';
 import contact from "../../assets/icons/contact.svg";
+import deleteIcon from "../../assets/icons/delete.svg"
+import editIcon from "../../assets/icons/edit.svg";
+import right_arrow_black from "../../assets/icons/right_arrow_black.svg";
 import { useSelector, useDispatch } from 'react-redux';
 import {
     setShowContactModal,
     setEditContactShow
 } from '../../redux/reducer';
 import {
-    addNewContactCardFun,
     setItemFun,
-    editNameFun,
     emailEditFun,
     phoneEditFun,
     addEmailContainer,
@@ -42,8 +40,7 @@ const EditMenu = () => {
                     <EditMenuBody>
                         <div className='addressModalHeader'>
                             <div className='modal_head_title_wrap'>
-                                <h1 className='modal_header'><ArrowLeftOutlined className='drawer_memu_back' onClick={() => { dispatch(setShowContactModal({ bool: false })) }} />Contacts</h1>
-                                <span className='addButton' onClick={() => addNewContactCardFun(editState)}><PlusCircleOutlined /> add</span>
+                                <h1 className='modal_header'><img src={right_arrow_black} alt="right_arrow_black" className='drawer_memu_back' onClick={() => { dispatch(setShowContactModal({ bool: false })) }} />Contacts</h1>
                             </div>
                             <span className='modal_desc'>Please provide the company emails and contacts</span>
                         </div>
@@ -54,8 +51,8 @@ const EditMenu = () => {
                                         <div className='card_header'>
                                             <span className='card_title'><img src={contact} className="title_icon" alt="img" />{item?.team}</span>
                                             <div className='card_icons'>
-                                                <EditFilled className="edit_icon" onClick={() => setItemFun(item, index, editState)} />
-                                                <DeleteOutlined className="edit_icon" onClick={() => deleteCardFun(index, editState)} />
+                                                <img src={editIcon} alt="editIcon" className="edit_icon" onClick={() => setItemFun(item, index, editState)} />
+                                                <img src={deleteIcon} alt="deleteIcon" className="edit_icon" onClick={() => deleteCardFun(index, editState)} />
                                             </div>
                                         </div>
                                         <div className='card_body'>
@@ -78,7 +75,7 @@ const EditMenu = () => {
                     <EditCardData>
                         <div className='addressModalHeader'>
                             <div className='modal_head_title_wrap'>
-                                <h1 className='modal_header'><ArrowLeftOutlined className='drawer_memu_back' onClick={() => { dispatch(setEditContactShow(false)) }} />Contacts</h1>
+                                <h1 className='modal_header'><img src={right_arrow_black} alt="right_arrow_black" className='drawer_memu_back' onClick={() => { dispatch(setEditContactShow(false)) }} />Contacts</h1>
                             </div>
                             <span className='modal_desc'>Please provide the company emails and contacts</span>
                         </div>

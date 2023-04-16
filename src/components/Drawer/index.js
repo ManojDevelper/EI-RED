@@ -8,6 +8,10 @@ import team from "../../assets/icons/team.png";
 import team_hover from "../../assets/icons/team_hover.png";
 import patners from "../../assets/icons/patners.png";
 import patners_hover from "../../assets/icons/patners_hover.png";
+import product from "../../assets/icons/product.png";
+import product_hover from "../../assets/icons/product_hover.png";
+import awards from "../../assets/icons/awards.png";
+import awards_hover from "../../assets/icons/awards_hover.png";
 import about from "../../assets/icons/about.png";
 import about_hover from "../../assets/icons/about_hover.png";
 import payment from "../../assets/icons/payment.png";
@@ -27,7 +31,7 @@ const Drawer = () => {
             <DrawerMenu>
                 <DrawerButton onClick={() => tabActiveFun("dashboard")} className={tabActive === "dashboard" && "active_btn"}>
                     <img src={tabActive === "dashboard" ? dashboard_hover : dashboard} alt="dashboard" className='btn_logo' />
-                    <span className={tabActive === "dashboard" && "active"}>dashboard</span>
+                    <span className={tabActive === "dashboard" && "active"}>Dashboard</span>
                 </DrawerButton>
                 <DrawerButton onClick={() => tabActiveFun("orders")} className={tabActive === "orders" && "active_btn"}>
                     <img src={tabActive === "orders" ? orders_hover : orders} alt="orders" className='btn_logo' />
@@ -40,6 +44,14 @@ const Drawer = () => {
                 <DrawerButton onClick={() => tabActiveFun("patners")} className={tabActive === "patners" && "active_btn"}>
                     <img src={tabActive === "patners" ? patners_hover : patners} alt="patners" className='btn_logo' />
                     <span className={tabActive === "patners" && "active"}>Patners</span>
+                </DrawerButton>
+                <DrawerButton onClick={() => tabActiveFun("product")} className={tabActive === "product" && "active_btn"}>
+                    <img src={tabActive === "product" ? product_hover : product} alt="product" className='btn_logo' />
+                    <span className={tabActive === "product" && "active"}>Product Listings</span>
+                </DrawerButton>
+                <DrawerButton onClick={() => tabActiveFun("awards")} className={tabActive === "awards" && "active_btn"}>
+                    <img src={tabActive === "awards" ? awards_hover : awards} alt="awards" className='btn_logo' />
+                    <span className={tabActive === "awards" && "active"}>Awards & Honours</span>
                 </DrawerButton>
                 <DrawerButton onClick={() => tabActiveFun("about")} className={tabActive === "about" && "active_btn"}>
                     <img src={tabActive === "about" ? about_hover : about} alt="about" className='btn_logo' />
